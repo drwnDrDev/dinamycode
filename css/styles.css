@@ -134,35 +134,52 @@ header nav{
 }
 
 .home-img  {
+    height: 24rem;
+    width: 32rem;
     max-width: 100%;
     align-content: center;
     margin: auto;
+    background-image: url('/img/home-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 0;
+    opacity: 0.2;
 }
-.home-img img{
-
-    width: 100%;
-    height: auto;
-
-       
-}   
+ 
 
 .home-text{
+    position: relative;
+    bottom: 24rem;
+    z-index: 10;
     width: 100%;
-    padding-left: 3.5rem;
-    /*text-shadow: 0px 8px 8px 0px grey;*/
+    margin-inline-end: 0;
+ 
 }
 
 
 .home-text h1{
 
-    font-size: 3.5rem;
-    margin: 0.5rem 0;
+    font-size: 10vw;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: -8%;
+   
 }
+.home-text h2{
+    font-size: 7vw;
+    text-align: center;
+    
+}
+
 
 .home-text p{
 
-    font-size: 1.5rem;
-    margin: 0.3rem 0;
+    font-size: small;
+    color: aliceblue;
+    padding: 3%;
+
     
 }
 
