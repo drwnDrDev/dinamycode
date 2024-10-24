@@ -339,7 +339,66 @@ Estilos del footer==============================================================
 }
 .social-item{
     width: auto;
+    text-decoration: none;
+    color: #e8e5ffff;
     margin: auto;
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social-item:hover{
+    color: white;
+    filter: brightness(1.5);
+}
+.icon {
+    display: block; 
+    padding: 0.5em;
+    max-width: 1em;
+    max-height: 1em;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    fill-rule: evenodd;
+    fill: currentColor;
+}
+
+.icon-name {
+    display: none;
+}
+
+.dc-facebook {
+    background-image: url(../svg/Facebook.svg);
+   
+}
+.dc-instagram {
+    background-image: url(../svg/Instagram.svg);
+    
+}
+.dc-linkedin {
+    background-image: url(../svg/Linkedin.svg);
+    
+}
+.dc-twitter {
+    background-image: url(../svg/Twitter.svg);
+    
+}
+.dc-youtube {
+    background-image: url(../svg/Youtube.svg);
+    
+}
+.dc-github {
+    background-image: url(../svg/Github.svg);
+    
+}
+.dc-whatsapp {
+    background-image: url(../svg/WhatsApp.svg);
+    
+}
+.dc-telegram {
+    background-image: url(../svg/Telegram.svg);
+    
 }
 
 /*media querys responsive*====================================================================================/
@@ -364,6 +423,9 @@ Estilos del footer==============================================================
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
             gap: 1em;
+        }
+        .icon-name {
+            display: inherit;
         }
     }
 /* Large devices (laptops/desktops, 992px and up) 
