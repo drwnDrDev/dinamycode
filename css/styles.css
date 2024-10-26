@@ -58,6 +58,7 @@ box-shadow: 0px 8px 8px 0px grey;
 
 
 body{
+    width: 100vw;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -195,12 +196,11 @@ header nav{
 
 .hero-btn{
     background-color: rgba(218, 2, 38, 1);
+    width: fit-content;
     font-size: 1.2rem;
-    font-weight: bolder;  
+    font-weight: 600;
     color: #ffff;
-    width: auto;
     padding: 1rem;
-    border-style:;
     border-radius: 1rem;
 }
 
@@ -210,9 +210,9 @@ header nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: 0.5rem; 
-    row-gap: 0.5rem;
-    padding: 0 0.5rem;
+    column-gap: 2rem; 
+    row-gap: 2rem;
+    padding: 0 1rem;
 }
 .project-title{
     
@@ -223,8 +223,8 @@ header nav{
 }
 .project-title h2{
     padding-left: 1em;
-    font-size: 2em;
-    color: #fae256ff;
+    font-size: 1.2rem;
+
 }
 .icon-title{
 
@@ -245,11 +245,14 @@ header nav{
     
 } */
 
+/* contenido de cada tarjeta ====================================================================*/
+
 .project-card{
     
     width: 100%;
     padding: 1rem;
-    border-radius: 4px;
+    border: solid rgba(144, 255, 255, 1);
+    border-radius: 3rem;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
@@ -262,7 +265,7 @@ header nav{
 
 }
 .project-img img{
-    width: 100%;
+    width: 60%;
     text-align: center;
 
 }
@@ -270,27 +273,36 @@ header nav{
 
 .project-text{
     width: 100%;
+    padding: 1rem;
     color: #e8e5ffff;
     display: flex;
     flex-direction: column;
-    align-content: start;
-    justify-content: space-between;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
 .project-text h3{
     font-size: 1.5rem;
+    text-align: center;
 
 }
 .project-text p{
-    line-height: 1.5rem;
-    
+    font-size: 1.2rem;
+        
 }
 
 .project-text a{
+    background-color: rgb(138, 254, 254);
+    width: 60%;
+    margin: auto;
+    margin-top: 1rem;
     text-decoration: none;
-    font-size: 1rem;
-    color: #fae256ff;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffff;
     padding: 1rem 1rem;
+    border-radius: 2rem;
+    
 
 }
 .project-text a:hover{
