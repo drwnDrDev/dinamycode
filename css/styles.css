@@ -131,7 +131,7 @@ header nav{
     width: 100%;
     min-height: 100vh;
     max-height: 100vh;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -154,7 +154,7 @@ header nav{
 .home-text{
     font-family: 'Courier New', Courier, monospace;
     padding: 0.5rem;
-    width: 100%;
+    /* width: 100%; */
     
     /*text-shadow: 0px 8px 8px 0px grey;*/
 }
@@ -196,11 +196,14 @@ header nav{
 
 .hero-btn{
     background-color: rgba(218, 2, 38, 1);
+    margin: 0 auto;
     width: fit-content;
     font-size: 1.2rem;
     font-weight: 600;
     color: #ffff;
     padding: 1rem;
+    text-decoration: none;
+    text-align: center;
     border-radius: 1rem;
 }
 
@@ -212,18 +215,17 @@ header nav{
     justify-content: space-evenly;
     column-gap: 2rem; 
     row-gap: 2rem;
-    padding: 0 1rem;
+    
 }
 .project-title{
     
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     align-content: center;
     align-items: center;
 }
 .project-title h2{
-    padding-left: 1em;
-    font-size: 1.2rem;
+   font-size: 1.5rem;
 
 }
 .icon-title{
@@ -249,31 +251,35 @@ header nav{
 
 .project-card{
     
-    width: 100%;
+    width: 80%;
     padding: 1rem;
     border: solid rgba(144, 255, 255, 1);
     border-radius: 3rem;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     column-gap: 1rem;
             
 }
 .project-img{
-    width: 100%;
+    width: 80%;
     text-align: center;
 
 }
 .project-img img{
-    width: 60%;
+    width: 100%;
     text-align: center;
 
 }
 
 
 .project-text{
-    width: 100%;
+    
+    width: 80%;
     padding: 1rem;
+    text-align: center;
     color: #e8e5ffff;
     display: flex;
     flex-direction: column;
