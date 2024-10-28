@@ -389,13 +389,19 @@ Estilos del footer==============================================================
 .social{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
+    align-items: end;
     gap: 1;
 }
 .social-item{
-    width: auto;
-    margin: auto;
+   
+    width: 3rem;
+    padding: 0.5rem;
+    
+}
+.social-item img{
+    width: 100%;
 }
 
 /*media querys responsive*====================================================================================/
