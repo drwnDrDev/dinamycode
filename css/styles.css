@@ -372,11 +372,12 @@ Estilos del footer==============================================================
 
 .footer-body{
     
-    width: 80%;
-    padding: 1rem;
-    margin: auto;
+    width: 100%;
+    margin: 1rem auto;
+
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1rem;
     
 }
@@ -388,6 +389,7 @@ Estilos del footer==============================================================
 }
 .social{
     width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -396,12 +398,20 @@ Estilos del footer==============================================================
 }
 .social-item{
    
-    width: 3rem;
-    padding: 0.5rem;
-    
+    width: 2.5rem;
+    height: 2.5rem;
+        
 }
 .social-item img{
     width: 100%;
+}
+.contact,
+.copy-right{
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(99, 104, 113);
+   
 }
 
 /*media querys responsive*====================================================================================/
