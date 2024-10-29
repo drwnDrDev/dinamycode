@@ -404,6 +404,12 @@ Estilos del footer==============================================================
 }
 .social-item img{
     width: 100%;
+    color: rgb(8, 195, 179);
+    
+}
+.social-item:hover{
+    filter: none;
+    transform: scale(1.1);
 }
 .contact,
 .copy-right{
@@ -413,6 +419,7 @@ Estilos del footer==============================================================
     color: rgb(99, 104, 113);
    
 }
+
 
 /*media querys responsive*====================================================================================/
 
@@ -436,6 +443,11 @@ Estilos del footer==============================================================
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, 1fr);
             gap: 1em;
+        }
+
+        .social-item:hover{
+            filter: none;
+            transform: scale(1.1);
         }
     }
 /* Large devices (laptops/desktops, 992px and up) 
