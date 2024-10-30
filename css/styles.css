@@ -183,14 +183,14 @@ header nav{
     
 }
 .home-text-description{
-
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0.5rem;
     font-size: 1.2;
     
 }
 .home-text-description p{
-    text-align: center;
+    
     font-size: 1.2rem;
 }
 
@@ -206,6 +206,51 @@ header nav{
     text-align: center;
     border-radius: 1rem;
 }
+/*Features =========================================================*/
+.features_container{
+    background: linear-gradient(
+        45deg, 
+        #2f3d5bff, #2f2730ff, #19141bff);
+    width: 100%;
+    padding: 1rem 0;
+}
+.features_title{
+    margin: 1rem;
+    text-align: center;
+}
+.feature{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+}
+.feature_img img{
+    width: auto;
+}
+.feature_description{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.feature_description p{
+    padding: 0 1rem;
+}
+.feature_description a{
+    background-color: rgb(138, 254, 254);
+    margin: 1rem auto;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffff;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
 
 /*Contenedor de tarjetas ====================================*/
 .projects-container{
@@ -225,7 +270,8 @@ header nav{
     align-items: center;
 }
 .project-title h2{
-   font-size: 1.5rem;
+   text-align: center;
+    font-size: 1.5rem;
 
 }
 .icon-title{
