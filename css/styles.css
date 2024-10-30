@@ -226,9 +226,16 @@ header nav{
     align-items: center;
     gap: 1rem;
     margin: auto;
+    padding: 1rem 0;
 }
+.feature_img{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
 .feature_img img{
-    width: auto;
+    width: 70%;
 }
 .feature_description{
     width: 100%;
