@@ -220,13 +220,22 @@ header nav{
 }
 .feature{
     width: 100%;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 1rem;
     margin: auto;
     padding: 1rem 0;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: cover;
+}
+@keyframes fade-in {
+    from{scale: 0.8; opacity: 0;}
+    to{scale: 1; opacity: 1;}
+    
 }
 .feature_img{
     width: 100%;
