@@ -394,23 +394,37 @@ header nav{
     margin: auto;
 }
 .tabs{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 .tab_title{
     width: 100%;
-    padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    background-color: #2f2730ff;
+    border-radius: 0.5rem;
     align-items: center;
-    border: solid 1px gray;
     cursor: pointer;
         
 }
+.icon_tab{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    color: rgb(138, 254, 254);
+    text-shadow: 3px 3px 8px rgb(138, 254, 254, 0.5),
+                -3px -3px 8px rgb(138, 254, 254, 0.5) ;
+}
+
 .tab_title svg{
+    width: 2rem;
+    height: 2rem;
+    fill: rgb(138, 254, 254);
+    padding: 1rem 1.5rem;
+    margin-left: auto;
     transition: transform 0.3s ease-in;
 }
 .tab_text{
@@ -420,7 +434,6 @@ header nav{
     transition: max-height 0.5s ease;
 }
 .tab_text p{
-    margin: 0 auto;
     padding: 0 1rem;
     line-height: 1.5;
     text-align: justify;
