@@ -467,7 +467,7 @@ header nav{
     padding: 5rem 0;
 }
 
-.grid_title{
+.grid_section .grid_title{
     text-align: center;
     margin: auto;
     margin-bottom: 3rem;
@@ -595,7 +595,7 @@ Estilos del footer==============================================================
     {
         main{
 
-            width: 80%;    
+            width: 40%;    
         
         }
 
