@@ -212,10 +212,11 @@ header nav{
         45deg, 
         #2f3d5bff, #2f2730ff, #19141bff);
     width: 100%;
-    padding: 1rem 0;
+    padding: 5rem 0;
 }
 .features_title{
-    margin: 1rem;
+    margin: auto;
+    margin-bottom: 3rem;
     text-align: center;
 }
 .feature{
@@ -230,7 +231,7 @@ header nav{
     justify-content: space-evenly;
     align-items: center;
     margin: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem 0;
     animation: fade-in linear;
     animation-timeline: view();
@@ -279,19 +280,19 @@ header nav{
 /*Contenedor de tarjetas ====================================*/
 .projects-container{
     width: 100%;
+    padding: 5rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     column-gap: 2rem; 
-    row-gap: 2rem;
+    row-gap: 3rem;
     
 }
 .project-title{
     
-    /* width: 100%; */
-    display: flex;
-    align-content: center;
-    align-items: center;
+    margin: auto;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 .project-title h2{
    text-align: center;
@@ -392,10 +393,13 @@ header nav{
 
 .process_container{
     width: 100%;
-    padding: 1rem 0;
+    padding: 5rem 0;
+    background: linear-gradient(45deg, #2f2730ff, #2f3d5bff);
 }
 .process_container .process_title{
     text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
 }
 .tabs_container{
     width: 90%;
@@ -439,8 +443,6 @@ header nav{
 .tab_text{
     width: 100%;
     max-height: 0;
-    border: 1px solid rgb(47, 39, 48);
-    border-radius: 0.5rem;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
@@ -460,11 +462,21 @@ header nav{
 
 /*contenedor GRID ===========================================================================================*/
 
+.grid_section{
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.grid_title{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
 .grid-container{
     
     width: 100%;
-    height: 50vh;
-    margin-top: 2em;
+    padding: 2rem 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -482,6 +494,7 @@ header nav{
     height: 20vh;
     padding: 1rem;
     border-radius: 4px;
+    background: rgba(144, 255, 255, 0.1);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
