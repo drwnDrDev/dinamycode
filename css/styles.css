@@ -134,12 +134,15 @@ header nav{
     min-height: 100vh;
     max-height: 100vh;
     background: radial-gradient(
+        circle at 0% 0%,
+        rgba(25, 20, 27, 0.5) 10%, rgba(25, 20, 27, 0) 40%),
+        radial-gradient(
         circle at 0 100%,
-        rgba(11, 201, 215, 0.2) 10%, rgba(0, 0, 0, 0) 30%),
+        rgba(11, 201, 215, 0.2) 10%, rgba(0, 0, 0, 0) 40%),
         radial-gradient(
         circle at 100% 50%,
-        rgba(188, 64, 125, 0.2) 10%, rgba(0, 0, 0, 0) 30%)
-        ;
+        rgba(188, 64, 125, 0.2) 10%, rgba(0, 0, 0, 0) 40%);
+        
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -162,10 +165,8 @@ header nav{
 .home-text{
     font-family: 'Courier New', Courier, monospace;
     padding: 0.5rem;
-    /* width: 100%; */
-    
-    /*text-shadow: 0px 8px 8px 0px grey;*/
 }
+
 
 
 
@@ -180,8 +181,11 @@ header nav{
 .home-text p{
 
     font-size: 1.5rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
     margin: 0;
-    text-align: center;
+    margin-top: -0.5rem;
+    text-align:center;
     
 }
 .home-text-description{
@@ -209,9 +213,9 @@ header nav{
 }
 /*Features =========================================================*/
 .features_container{
-    background: linear-gradient(
+    /* background: linear-gradient(
         45deg, 
-        #2f3d5bff, #2f2730ff, #19141bff);
+        #2f3d5bff, #2f2730ff, #19141bff); */
     width: 100%;
     padding: 5rem 0;
 }
