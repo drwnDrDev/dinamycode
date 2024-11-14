@@ -11,75 +11,13 @@
 --delft-blue: #2f3d5bff;
 --white: #ffffffff;
 
-
-$ice-blue: rgba(144, 255, 255, 1);
-$cool-gray: rgba(130, 130, 164, 1);
-$snow: rgba(255, 253, 255, 1);
-$non-photo-blue: rgba(131, 229, 255, 1);
-$raisin-black: rgba(47, 39, 48, 1);
-$lavender-pink: rgba(255, 169, 211, 1);
-$raisin-black-2: rgba(25, 20, 27, 1);
-$delft-blue: rgba(47, 61, 91, 1);
-$white: rgba(255, 255, 255, 1);
-
- SCSS Gradient 
-$gradient-top: linear-gradient(0deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-right: linear-gradient(90deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-bottom: linear-gradient(180deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-left: linear-gradient(270deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-top-right: linear-gradient(45deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-bottom-right: linear-gradient(135deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-top-left: linear-gradient(225deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-bottom-left: linear-gradient(315deg, #90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-$gradient-radial: radial-gradient(#90ffffff, #8282a4ff, #fffdffff, #83e5ffff, #2f2730ff, #ffa9d3ff, #19141bff, #2f3d5bff, #ffffffff);
-
-
-
-----------------------------------------------------------------------
-
---black-bean: #280901ff;
---black-bean-2: #3c010dff;
---lavender-web: #e8e5ffff;
---maize: #fae256ff;
---fire-engine-red: #da0226ff;
-
-$black-bean: rgba(40, 9, 1, 1);
-$black-bean-2: rgba(60, 1, 13, 1);
-$lavender-web: rgba(232, 229, 255, 1);
-$maize: rgba(250, 226, 86, 1);
-$fire-engine-red: rgba(218, 2, 38, 1);
-
-box-shadow: 0px 8px 8px 0px grey;
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fae256ff"><path d="M640-480v-80h80v80h-80Zm0 80h-80v-80h80v80Zm0 80v-80h80v80h-80ZM447-640l-80-80H160v480h400v-80h80v80h160v-400H640v80h-80v-80H447ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80v-480 480Z"/></svg>
-
-
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-body{
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    color: rgba(232, 229, 255, 1);
-    background: linear-gradient(
-        45deg, 
-        #2f2730ff, #19141bff, #2f3d5bff);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-       
-}
 main{
 
     width: 100%;    
     margin: auto;
-    /* display: flex;
-    flex-direction: column; */
-    /* border: solid yellow 0.5px; */
-
+  
 }
 
 header{
@@ -167,7 +105,10 @@ header nav{
     padding: 0.5rem;
 }
 
-
+.title{
+    width: 100%;
+    
+}
 
 
 .title img{
@@ -221,15 +162,17 @@ header nav{
 }
 .features_title{
     margin: auto;
+    padding: 0 1rem;
     margin-bottom: 3rem;
     text-align: center;
 }
 .feature{
     width: 90%;
-    background: rgb(131,58,180);
+    background: rgb(47, 39, 48, .8);
+    /* background: rgb(131,58,180);
     background: linear-gradient(
         145deg, 
-        rgba(131,58,180,1) 0%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,1) 100%);
+        rgba(131,58,180,1) 0%, rgba(253,29,29,0.5) 50%, rgba(252,176,69,1) 100%); */
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -269,6 +212,7 @@ header nav{
 }
 .feature_description p{
     padding: 0 1rem;
+    
 }
 .feature_description a{
     background-color: rgb(138, 254, 254);
@@ -296,6 +240,7 @@ header nav{
 .project-title{
     
     margin: auto;
+    padding: 0 1rem;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -404,6 +349,7 @@ header nav{
 .process_container .process_title{
     text-align: center;
     margin: auto;
+    padding: 0 1rem;
     margin-bottom: 3rem;
 }
 .tabs_container{
@@ -496,7 +442,7 @@ header nav{
 .grid-cards{
     
     min-width: 80vw;
-    height: 20vh;
+    min-height: 16rem;
     padding: 1rem;
     border-radius: 4px;
     background: rgba(144, 255, 255, 0.1);
