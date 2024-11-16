@@ -7,6 +7,7 @@
 --non-photo-blue: #83e5ffff;
 --raisin-black: #2f2730ff;
 --lavender-pink: #ffa9d3ff;
+--pink: rgba(188, 64, 125, 1)
 --raisin-black-2: #19141bff;
 --delft-blue: #2f3d5bff;
 --white: #ffffffff;
@@ -141,7 +142,8 @@ header nav{
 }
 
 .hero-btn{
-    background-color: rgba(218, 2, 38, 1);
+    display: block;
+    background-color: rgba(188, 64, 125, 1);
     margin: 0 auto;
     width: fit-content;
     font-size: 1.2rem;
@@ -151,6 +153,7 @@ header nav{
     text-decoration: none;
     text-align: center;
     border-radius: 1rem;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4);
 }
 /*Features =========================================================*/
 .features_container{
@@ -292,7 +295,7 @@ header nav{
     url(/img/lab_1.avif) no-repeat center center ;
     background-size: cover;
     border-radius: 2rem;
-    /* box-shadow: 0px 10px 20px rgba(144, 255, 255, 0.5); */
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
