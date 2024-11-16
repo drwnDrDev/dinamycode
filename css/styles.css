@@ -274,8 +274,9 @@ header nav{
     
     width: 80%;
     padding: 1rem;
-    background: rgba(144, 255, 255, 0.1);
-    border: 1px solid rgba(144, 255, 255, 0.5);
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.75), rgba(0, 0 , 0, 1)),
+    url(/img/lab_1.avif) no-repeat center center ;
+    background-size: cover;
     border-radius: 2rem;
     /* box-shadow: 0px 10px 20px rgba(144, 255, 255, 0.5); */
     display: flex;
@@ -285,6 +286,9 @@ header nav{
     column-gap: 1rem;
             
 }
+
+
+
 .project-img{
     width: 80%;
     text-align: center;
