@@ -166,6 +166,9 @@ header nav{
     padding: 5rem 0;
 }
 .features_title{
+    background: radial-gradient(
+        at 50% 50%,
+        rgba(37, 144, 159, 1) 0%, rgba(37, 144, 159, 0) 60%);
     margin: auto;
     padding: 0 1rem;
     margin-bottom: 3rem;
@@ -240,6 +243,9 @@ header nav{
 }
 .project-title{
     
+    background: radial-gradient(
+        at 50% 50%,
+        rgba(37, 144, 159, 1) 0%, rgba(37, 144, 159, 0) 60%);
     margin: auto;
     padding: 0 1rem;
     margin-bottom: 3rem;
@@ -276,23 +282,15 @@ header nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: 2rem; 
-    row-gap: 3rem;
+    column-gap: 1rem; 
+    row-gap: 1rem;
+    
 }
-.project_card:nth-child(2){
-    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.75), rgba(0, 0 , 0, 1)),
-    url(/img/eventos_1.avif) no-repeat center center ;
-    background-size: cover;
-}
-.project_card:nth-child(3){
-    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.75), rgba(0, 0 , 0, 1)),
-    url(/img/laravel-img.png) no-repeat center center ;
-    background-size: cover;
-}
+
 
 .project_card{
     
-    width: 80%;
+    width: 85%;
     padding: 1rem;
     background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.75), rgba(0, 0 , 0, 1)),
     url(/img/lab_1.avif) no-repeat center center ;
@@ -313,6 +311,16 @@ header nav{
 @keyframes fade-in {
     from{scale: 0.8; opacity: 0;}
     to{scale: 1; opacity: 1;}
+}
+.project_card:nth-child(2){
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.75), rgba(0, 0 , 0, 1)),
+    url(/img/eventos_1.avif) no-repeat center center ;
+    background-size: cover;
+}
+.project_card:nth-child(3){
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.75), rgba(0, 0 , 0, 1)),
+    url(/img/laravel-img.png) no-repeat center center ;
+    background-size: cover;
 }
 
 .card_header{
@@ -373,13 +381,15 @@ header nav{
 
 .process_container{
     width: 100%;
-    padding: 5rem 0;
+    padding: 1rem 0;
 }
 .process_container .process_title{
+    background: radial-gradient(
+        at 50% 50%,
+        rgba(37, 144, 159, 1) 0%, rgba(37, 144, 159, 0) 60%);
     text-align: center;
-    margin: auto;
-    padding: 0 1rem;
-    margin-bottom: 3rem;
+    padding: 1rem;
+    
 }
 .tabs_container{
     width: 90%;
@@ -449,7 +459,11 @@ header nav{
 }
 
 .grid_section .grid_title{
+    background: radial-gradient(
+        at 50% 50%,
+        rgba(37, 144, 159, 1) 0%, rgba(37, 144, 159, 0) 60%);
     text-align: center;
+    padding: 0 1rem;
     margin: auto;
     margin-bottom: 3rem;
 }
