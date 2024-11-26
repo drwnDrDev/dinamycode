@@ -521,6 +521,7 @@ header nav{
     width: 3em;
 }
 .title-grid-card h3{
+    color: rgba(188, 64, 125, 1);
     padding-left: 1em;
 }
 
