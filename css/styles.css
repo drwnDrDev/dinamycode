@@ -17,9 +17,22 @@
     interpolate-size: allow-keywords;
 
 }
-
+body{    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgba(232, 229, 255, 1); 
+     background: linear-gradient(
+         45deg, 
+        #2f2730ff, #19141bff, #2f3d5bff);
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 main{
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;    
     margin: auto;
   
@@ -138,6 +151,7 @@ header nav{
     text-align: center;
     padding: 0.5rem;
     font-size: 1.2rem;
+    margin-bottom: 0;
     
 }
 .home-text-description p{
@@ -163,7 +177,7 @@ header nav{
 .features_container{
     
     width: 100%;
-    padding: 5rem 0;
+    padding: 2rem;
 }
 .features_title{
     background: radial-gradient(
@@ -186,7 +200,7 @@ header nav{
     align-items: center;
     margin: auto;
     margin-bottom: 2rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     animation: fade-in linear;
     animation-timeline: view();
     animation-range-start: cover;
@@ -208,16 +222,20 @@ header nav{
 .feature_img img{
     width: 70%;
     filter:drop-shadow(4px 24px 16px rgba(0, 0, 0, 0.5));
+    border-radius: 1rem;
 }
 .feature_description{
     width: 100%;
-    text-align: center;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+
 }
 .feature_description h3{
+    font-size: 1.5rem;
     color: aqua;
+    text-align: center;
+    margin: 0;
 }
 .feature_description p{
     padding: 0 1rem;
@@ -533,7 +551,6 @@ Estilos del footer==============================================================
     
     width: 100%;
     margin: 1rem auto;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -550,6 +567,7 @@ Estilos del footer==============================================================
     width: 100%;
     padding: 1rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: end;
@@ -578,6 +596,13 @@ Estilos del footer==============================================================
     color: rgb(99, 104, 113);
    
 }
+.copy-right >p>a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    text-decoration: none;
+    color: rgb(99, 104, 113);
+    font-weight: 900;
+}
 
 
 /*media querys responsive*====================================================================================/
@@ -591,10 +616,53 @@ Estilos del footer==============================================================
     {
         main{
 
-            width: 40%;    
+            width: 100%;    
+            justify-content: center;
+            align-items: start;
         
         }
+        .title {
+            width: 50%;
+            max-width: 600px;
+            margin: 0 auto;
 
+        }
+        .home-text-description {
+            width: 50%;
+            max-width: 600px;
+            margin:0 auto;
+        }
+        .features_container{
+            width: 65%;
+            padding: 2rem;
+        }
+        .projects-container{
+          
+            width: 36%;
+            padding: 1rem 0;
+        }
+        .feature {
+            display: flex;
+            flex-direction: row;
+        }
+        .feature_img {
+            width: 50%;
+            padding: 1rem 0;
+        }
+        .feature_img img {
+            width: 100%;
+            filter: drop-shadow(4px 24px 16px rgba(0, 0, 0, 0.5));
+            border-radius: 1rem;
+        }
+        .feature_description {
+            width: 45%;
+            padding: 1rem 0;
+        }
+        .project-title {
+            width: 100%;
+            padding: 1rem 0;
+            font-size: small;
+        }
         .grid-container{
             width: 100%;
             margin-top: 2em;
@@ -603,13 +671,50 @@ Estilos del footer==============================================================
             grid-template-rows: repeat(3, 1fr);
             gap: 1em;
         }
+        .process_container {
+            width: 60%;
+            padding: 1rem 0;
+        }
 
         .social-item:hover{
             filter: none;
             transform: scale(1.1);
         }
+
+        .grid-container {
+            width: 88%;
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1em;
+        }
+
+        .grid_section {
+            width: 100%;
+            margin: auto;
+            display: grid;
+            padding: 1rem 0;
+            justify-items: center;
+            gap: 1em;
+            overflow-x: auto;
+            scrollbar-width: none;
+            scroll-snap-type: x center;
+        }
+        
+        .grid-cards{
+    
+            min-width: 48%;
+            min-height: 16rem;
+            padding: 1rem;
+            border-radius: 4px;
+            background: rgba(144, 255, 255, 0.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+      
+            
+        }
+        .optional {
+            display: none;
+        }
     }
-/* Large devices (laptops/desktops, 992px and up) 
-@media only screen and (min-width: 992px) {...}
-/* Extra large devices (large laptops and desktops, 1200px and up)
-@media only screen and (min-width: 1200px) {...}*/
