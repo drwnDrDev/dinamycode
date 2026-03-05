@@ -2,363 +2,850 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DinamyCode: especialistas en diseño web y desarrollo de software a medida para impulsar negocios digitales. ¡Digitaliza tu empresa con nosotros!">
-    <meta name="keywords" content="DinamyCode, diseño web, desarrollo de software, aplicaciones personalizadas, digitalización de negocios">
-    
-    <title>Diseño Web y Desarrollo de Software | DinamyCode</title>
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <meta property="og:title" content="DinamyCode | Diseño Web y Desarrollo de Software">
-    <meta property="og:description" content="Especialistas en diseño web y desarrollo de software a medida para impulsar negocios digitales.">
-    <meta property="og:image" content="/img/dinamycode_title.png">
-    <meta property="og:url" content="https://dinamycode.com/">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="/img/dc.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
-    
-    <style>
-        body{    padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        color: rgba(232, 229, 255, 1); 
-         background: linear-gradient(
-             45deg, 
-            #2f2730ff, #19141bff, #2f3d5bff);
-        font-family: "Poppins", serif;
-        font-weight: 400;
-        font-style: normal;
+  <!-- SEO Primary -->
+  <title>DinamyCode | Diseño Web y Desarrollo de Software en Bogotá</title>
+  <meta name="description" content="DinamyCode es una agencia de diseño web y desarrollo de software en Bogotá, Colombia. Creamos sitios web, aplicaciones a medida y estrategias digitales que transforman negocios.">
+  <meta name="keywords" content="diseño web bogotá, desarrollo de software colombia, agencia digital bogotá, aplicaciones web a medida, posicionamiento SEO colombia, DinamyCode">
+  <meta name="author" content="DinamyCode">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080910">
+  <link rel="canonical" href="https://dinamycode.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DinamyCode | Diseño Web y Desarrollo de Software en Bogotá">
+  <meta property="og:description" content="Agencia de diseño web y desarrollo de software en Bogotá. Creamos sitios, apps y estrategias digitales que impulsan negocios reales.">
+  <meta property="og:image" content="https://dinamycode.com/img/dinamycode_og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://dinamycode.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="DinamyCode">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DinamyCode | Diseño Web y Software en Bogotá">
+  <meta name="twitter:description" content="Agencia de diseño web y desarrollo de software en Bogotá, Colombia. Soluciones digitales a medida.">
+  <meta name="twitter:image" content="https://dinamycode.com/img/dinamycode_og.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/img/dc.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/img/dc.svg">
+
+  <!-- Fonts: Bebas Neue (display) + Manrope (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dc-red':    '#C2407E',
+            'dc-blue':   '#0ABFAB',
+            'dc-yellow': '#90FFE8',
+            'ink':       '#1E2035',
+            'ink-2':     '#191A2D',
+            'ink-card':  '#13142A',
+            'paper':     '#F4F3EE',
+            'paper-2':   '#ECEAE1',
+          },
+          fontFamily: {
+            display: ['"Bebas Neue"', 'sans-serif'],
+            body:    ['Manrope', 'sans-serif'],
+          },
+        }
+      }
     }
-    </style>
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #1E2035;
+      color: #F4F3EE;
+      overflow-x: hidden;
+    }
+
+    /* ─── Scroll-driven reveals ─────────────────────────── */
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 28%;
+    }
+    .reveal-l {
+      animation: reveal-left linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 28%;
+    }
+    @keyframes reveal-up {
+      from { opacity: 0; transform: translateY(36px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes reveal-left {
+      from { opacity: 0; transform: translateX(-36px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ─── Hero stagger ──────────────────────────────────── */
+    .h1  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .10s both; }
+    .h2  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .28s both; }
+    .h3  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .46s both; }
+    .h4  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .60s both; }
+    .h5  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .74s both; }
+    @keyframes hero-in {
+      from { opacity: 0; transform: translateY(44px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── Floating blobs ────────────────────────────────── */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      animation: blob-float ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes blob-float {
+      0%,100% { transform: translateY(0) scale(1); }
+      50%      { transform: translateY(-24px) scale(1.06); }
+    }
+
+    /* ─── Subtle grid overlay ───────────────────────────── */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(244,243,238,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(244,243,238,.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* ─── Service cards ─────────────────────────────────── */
+    .svc-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform .45s cubic-bezier(.22,1,.36,1),
+                  box-shadow .45s ease;
+    }
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: #C2407E;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
+    }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0,0,0,.12);
+    }
+
+    /* ─── Project cards ─────────────────────────────────── */
+    .proj-card {
+      transition: transform .4s cubic-bezier(.22,1,.36,1);
+    }
+    .proj-card:hover { transform: translateY(-8px); }
+
+    /* ─── Tab accordion ─────────────────────────────────── */
+    .tab-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height .5s cubic-bezier(.4,0,.2,1),
+                  opacity .35s ease;
+    }
+    .tab-wrap.open .tab-body {
+      max-height: 240px;
+      opacity: 1;
+    }
+    .tab-arrow { transition: transform .3s ease; }
+    .tab-wrap.open .tab-arrow { transform: rotate(180deg); }
+    .tab-wrap.open .tab-num  { color: #C2407E; }
+
+    /* ─── Benefit cards ─────────────────────────────────── */
+    .ben-card {
+      transition: transform .35s ease, background-color .35s ease;
+      position: relative;
+    }
+    .ben-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px; width: 0;
+      background: #90FFE8;
+      transition: width .4s ease;
+    }
+    .ben-card:hover { transform: translateY(-3px); background-color: #131525; }
+    .ben-card:hover::after { width: 100%; }
+
+    /* ─── CTA button ────────────────────────────────────── */
+    .btn-red {
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .btn-red::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,.14);
+      transform: translateX(-100%);
+      transition: transform .3s ease;
+    }
+    .btn-red:hover::before { transform: translateX(0); }
+    .btn-red:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(194,64,126,.4);
+    }
+
+    /* ─── Nav link underline ────────────────────────────── */
+    .nl {
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nl::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 1px; width: 0;
+      background: #FF0000;
+      transition: width .3s ease;
+    }
+    .nl:hover::after { width: 100%; }
+
+    /* ─── Scroll indicator pulse ────────────────────────── */
+    @keyframes scroll-pulse {
+      0%,100% { opacity: .4; transform: scaleY(1); }
+      50%      { opacity: .8; transform: scaleY(1.3); }
+    }
+    .scroll-line { animation: scroll-pulse 2s ease-in-out infinite; }
+
+    /* ─── Section label number (decorative bg) ──────────── */
+    .sec-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(6rem, 16vw, 14rem);
+      line-height: 1;
+      opacity: .06;
+      position: absolute;
+      top: -1.5rem;
+      right: 2rem;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -.02em;
+    }
+  </style>
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "DinamyCode",
+    "description": "Agencia de diseño web y desarrollo de software en Bogotá, Colombia. Creamos sitios web, aplicaciones y estrategias digitales para impulsar negocios.",
+    "url": "https://dinamycode.com",
+    "logo": "https://dinamycode.com/img/dc.svg",
+    "image": "https://dinamycode.com/img/dinamycode_og.png",
+    "telephone": "+573132635848",
+    "email": "hola@dinamycode.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Dg. 69c Sur #78C-36",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "4.6097",
+      "longitude": "-74.0817"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Colombia" },
+      { "@type": "Place",   "name": "América Latina" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios DinamyCode",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de Páginas Web" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo de Aplicaciones" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estrategias de Crecimiento Digital" } }
+      ]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/dinamycode/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-    <main>
-        
-        <section id="#principal" class="home-container">
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav class="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 md:px-12 py-4
+            bg-ink/85 backdrop-blur-md border-b border-white/5">
 
-            <div class="home-text">
-                
-                <div class="title">
-                    <img src="/img/dinamycode_title.png" alt="logo de dinamyCode">
-                    <h1 class="title_text">dinamycode</h1>
-                </div>
-                <p>Software & Diseño Web</p>
-            </div>
-            <div class="home-text-description">
-                    <h2>Expertos en Software y Diseño Web</h2>
-                 <p>Creamos <strong>soluciones de software avanzadas y diseño de paginas web</strong>,
-                     para digitalizar y potenciar negocios de todos los tamaños , 
-                     llevamos tu marca al siguiente nivel en el mundo digital.
-                </p>
-            </div>
-            <a href="#" class="hero-btn">Contactanos</a>
-            
-        </section>
-       
-        <section class="features_container">
-            <div class="features_title">
-                <h2>Conoce todas las soluciones que tenemos para ti.</h2>
-            </div>
-            <article class="feature">
-                <div class="feature_img">
-                    <img src="/svg/landing.svg" alt="Servicio de diseño de paginas web de DinamyCode">
-                </div>
-                <div class="feature_description">
-                    <h3>Diseño de Paginas Web</h3>
-                    <p>Diseñamos paginas personalizadas para convertir visitantes en clientes,
-                        implementando las mejores técnicas de posicionamiento y ultimas tendencias
-                        de diseño para que tengas un sitio web moderno y atractivo.
-                    </p>
-                   
-                </div>
-            </article>
-            <article class="feature">
-                <div class="feature_img">
-                    <img src="/svg/Brand=Spotify, Color=ON.svg" alt="">
-                </div>
-                <div class="feature_description">
-                    <h3>Desarrollo de Aplicaciones</h3>
-                    <p>Automatíza las tareas de tu negocio mejorando el control y productividad. 
-                        Cuentanos tu caso y adaptamos la tecnología a tus necesidades.</p>
-                    
-                </div>
-            </article>
-            <article class="feature">
-                <div class="feature_img">
-                    <img src="/svg/Brand=Meta, Color=ON.svg" alt="">
-                </div>
-                <div class="feature_description">
-                    <h3>Estrategias de <br> Crecimiento en Línea</h3>
-                    <p>Te ayudamos a trazar el camino hacia una mayor visibilidad, 
-                        Todo negocio tiene oportunidad de crecer en el mundo digital.
-                    
-                    </p>
-                    
-                </div>
-            </article>
-            <a href="#" class="hero-btn">Cuentanos de tu proyecto</a>
-            
-        </section>
+  <a href="#inicio" class="flex items-center gap-3 group" aria-label="DinamyCode inicio">
+    <img src="/img/dc.svg" alt="DinamyCode icono" class="w-9 h-9 transition-transform duration-300 group-hover:scale-110">
+    <span class="font-display text-2xl text-paper tracking-widest">DINAMYCODE</span>
+  </a>
 
-        <section id="#projects" class="projects-container">
-            
-                 <div class="project-title">
-                <h2>Ellos son algunos de nuestros clientes
-                    que estan felices de pasarse al mundo digital
-                </h2>
-                 </div>
-            <article class="container_cards">
-                <div class="project_card">
-                    <div class="card_header">
-                        <div class="card_logo">
-                            <img src="img/biotek_logo.png" alt="proyecto laravel">
-                        </div>
-                        <div class="card_title">
-                            <h3>Biotek</h3>
-                            <span>Laboratorio clínico</span>
-                        </div>  
-                    </div>
-                        
-                    <div class="card_text">
-                        <p>Así es como un laboratorio clínico no volvió hacer tareas manuales 
-                            en sus registros de pacientes, entrega de resultados, facturación y administración
-                        </p>
-                    </div>
-                    <div class="card_footer">
-                        <p>Dra. Claudia Buitrago</p>
-                    </div>
-                </div>  
-                <div class="project_card">
-                    <div class="card_header">
-                        <div class="card_logo">
-                            <img src="img/casa_angel_logo.jpg" alt="proyecto laravel">
-                        </div>
-                        <div class="card_title">
-                            <h3>Casa Angel</h3>
-                            <span>Casa de Eventos</span>
-                        </div>  
-                    </div>
-                        
-                    <div class="card_text">
-                        <p>Así es como un laboratorio clínico no volvió hacer tareas manuales 
-                            en sus registros de pacientes, entrega de resultados, facturación y administración
-                        </p>
-                    </div>
-                    <div class="card_footer">
-                        <p>Ruben</p>
-                    </div>
-                </div>       
-                <div class="project_card">
-                    <div class="card_header">
-                        <div class="card_logo">
-                            <img src="img/sava_logo.jpg" alt="Savatech">
-                        </div>
-                        <div class="card_title">
-                            <h3>Savatech</h3>
-                            <span>Comercio de tecnología</span>
-                        </div>  
-                    </div>
-                        
-                    <div class="card_text">
-                        <p>Así es como un laboratorio clínico no volvió hacer tareas manuales 
-                            en sus registros de pacientes, entrega de resultados, facturación y administración
-                        </p>
-                    </div>
-                    <div class="card_footer">
-                        <p>Savatech</p>
-                    </div>
-                </div>                      
+  <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-paper/60">
+    <li><a href="#servicios" class="nl hover:text-paper transition-colors">Servicios</a></li>
+    <li><a href="#clientes"  class="nl hover:text-paper transition-colors">Clientes</a></li>
+    <li><a href="#proceso"   class="nl hover:text-paper transition-colors">Proceso</a></li>
+    <li><a href="#nosotros"  class="nl hover:text-paper transition-colors">Nosotros</a></li>
+  </ul>
 
-            </article>
-        </section>
-        <section class="process_container">
-            <h2 class="process_title">Asi trabajamos contigo</h2>
-            <div class="tabs_container"></div>
-                <article class="tabs">
-                    <div class="tab_title">
-                        <span class="icon_tab">1</span>
-                        <h3>Consultoría Inicial</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5a55cb">
-                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                    </div>
-                    <div class="tab_text">
-                        <p>Analizamos tus necesidades y objetivos.</p>
-                    </div>
-                </article>
-                <article class="tabs">
-                    <div class="tab_title">
-                        <span class="icon_tab">2</span>
-                        <h3>Diseño y Desarrollo</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5a55cb">
-                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                    </div>
-                    <div class="tab_text">
-                        <p>Creamos una página atractiva y funcional para tus clientes.</p>
-                    </div>
-                </article>
-                <article class="tabs">
-                    <div class="tab_title">
-                        <span class="icon_tab">3</span>
-                        <h3>Lanzamiento y Optimización</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5a55cb">
-                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                    </div>
-                    <div class="tab_text">
-                        <p>Te ayudamos a lanzarla y optimizarla para obtener los mejores resultados.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur 
-                            distinctio blanditiis eaque natus ipsa temporibus obcaecati enim corrupti sed consectetur?
-                        </p>
-                    </div>
-                </article>
-                <article class="tabs">
-                    <div class="tab_title">
-                        <span class="icon_tab">4</span>
-                        <h3>Seguimiento y Crecimiento</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5a55cb">
-                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                    </div>
-                    <div class="tab_text">
-                        <p>Nos aseguramos de que tu página se adapte a tu negocio en crecimiento.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="grid_section">
-            <h2 class="grid_title">Estas son las razones por las que nos destacamos</h2>
-            <article class="grid-container">
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 1-->
-                        <img src="svg/Award.svg" alt="">
-
-                        <h3>Seguridad y Fiabilidad</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Implementamos medidas de seguridad robustas para proteger tu sitio y la información de tus clientes.</p>
-                    </div>
-                </div>
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 2-->
-                        <img src="svg/devices.svg" alt="">
-
-                        <h3>Diseño Responsive</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Nuestros sitios web se adaptan perfectamente a cualquier dispositivo, ya sea móvil, tablet o desktop,
-                            asegurando una experiencia de usuario óptima.</p>
-                    </div>
-                </div>
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 3-->
-                        <img src="svg/Calendar.svg" alt="">
-
-                        <h3>Posicionamiento SEO</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Implementamos las mejores prácticas de SEO para que tu sitio web aparezca en los primeros resultados de búsqueda, atrayendo más tráfico orgánico.</p>
-                    </div>
-                </div>
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 4-->
-                        <img src="svg/Bookmark.svg" alt="">
-
-                        <h3>Diseño Web</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Utilizamos las tendencias más actuales en diseño web para que tu sitio sea moderno y atractivo.</p>
-                    </div>
-                </div>
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 5-->
-                        <img src="svg/Camera.svg" alt="">
-
-                        <h3>Redes Sociales</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Facilitamos la integración con tus perfiles de redes sociales para aumentar tu presencia en línea y facilitar la interacción con tus clientes. </p>
-                    </div>
-                </div>
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 6-->
-                        <img src="svg/Docs.svg" alt="">
-
-                        <h3>Gestión de Contenidos</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Proveemos sistemas de gestión de contenidos (CMS) intuitivos para que puedas actualizar tu sitio fácilmente sin necesidad de conocimientos técnicos.</p>
-                    </div>
-                </div>
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 7-->
-                        <img src="svg/Mail.svg" alt="">
-
-                        <h3>Analítica y Reportes</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Incluimos herramientas de analítica que te permiten monitorear el rendimiento de tu sitio y obtener insights valiosos sobre el comportamiento de tus visitantes.</p>
-                    </div>
-                </div>
-                <div class="grid-cards">
-                    <div class="title-grid-card">
-                        <!-- svg 8-->
-                        <img src="svg/Download.svg" alt="">
-
-                        <h3>Carga Optimizada</h3>
-                    </div>
-                    <div class="info-grid-card">
-                        <p>Nuestros sitios están optimizados para cargar rápidamente, mejorando la experiencia del usuario y el ranking en motores de búsqueda.</p>
-                    </div>
-                </div>
-            </article>
-        </section>
-        <!-- Elementos del Footer -->
-        <footer class="footer-body">
-              
-                <div class="social">
-                    <div class="social-item">
-                        <a href="#">
-                            <img src="/img/facebook.jpg" alt="Facebook">
-                        </a>
-                    </div>
-                    <div class="social-item">
-                        <a href="">
-                            <img src="/svg/Instagram.svg" alt="Instagram">
-                        </a>
-                    </div>
-                    <div class="social-item">
-                        <a href="https://www.linkedin.com/company/dinamycode/">
-                            <img src="/svg/Linkedin.svg" alt="Linkedin de dinamycode">
-                        </a>
-                    </div>
-                    
-                </div>
-                <div class="contact">
-                    <p>Dg. 69c Sur #78C -36 | +57 3132635848</p>
-                    <p>Bogota - Colombia</p>
-                </div>
-                <div class="copy-right">
-                    <p>dinamyCode &#169; Todos los derechos reservados.</p>
-                </div>
-            
-        </footer>
+  <a href="https://wa.me/573132635848" target="_blank" rel="noopener noreferrer"
+     class="btn-red bg-dc-red text-white text-sm font-semibold px-5 py-2.5 rounded-full">
+    Hablemos
+  </a>
+</nav>
 
 
-    </main>
+<!-- ══════════════════════════════════════════
+     HERO  ·  dark
+══════════════════════════════════════════ -->
+<section id="inicio" class="relative min-h-screen flex flex-col justify-center
+                             px-6 md:px-12 pt-28 pb-16 overflow-hidden bg-ink grid-bg">
 
-    <script async src="/js/tabs.js"></script>
+  <!-- Color blobs -->
+  <div class="blob w-[550px] h-[550px] bg-dc-blue   opacity-20 -top-24 -right-40"  style="animation-duration:10s;"></div>
+  <div class="blob w-[380px] h-[380px] bg-dc-red    opacity-15 -bottom-20 -left-20" style="animation-duration:13s; animation-delay:-4s;"></div>
+  <div class="blob w-[280px] h-[280px] bg-dc-yellow opacity-12 top-1/2 left-1/3"   style="animation-duration:9s;  animation-delay:-7s;"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto w-full">
+
+    <!-- Eyebrow -->
+    <div class="h1 flex items-center gap-3 mb-10">
+      <span class="w-10 h-px bg-dc-red"></span>
+      <span class="text-dc-red text-xs font-semibold tracking-[.22em] uppercase">Agencia Digital · Bogotá, Colombia</span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="font-display text-paper leading-none" style="font-size: clamp(3.6rem,10vw,8rem); letter-spacing:-.01em;">
+      <span class="h2 block">DISEÑAMOS</span>
+      <span class="h3 block">EL&nbsp;<span class="text-dc-red">FUTURO</span></span>
+      <span class="h4 block">DIGITAL.</span>
+    </h1>
+
+    <!-- Description -->
+    <p class="h5 mt-8 max-w-md text-paper/55 text-lg leading-relaxed">
+      Creamos software a medida y sitios web que convierten visitantes en clientes reales.
+    </p>
+
+    <!-- CTAs -->
+    <div class="h5 mt-10 flex flex-wrap items-center gap-4">
+      <a href="https://wa.me/573132635848" target="_blank" rel="noopener noreferrer"
+         class="btn-red bg-dc-red text-white font-semibold px-8 py-4 rounded-full text-base">
+        Inicia tu proyecto →
+      </a>
+      <a href="#servicios"
+         class="border border-paper/20 text-paper/65 hover:text-paper hover:border-paper/50
+                font-medium px-8 py-4 rounded-full text-base transition-all duration-300">
+        Ver servicios
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div class="h5 mt-20 pt-8 border-t border-white/10 grid grid-cols-3 gap-6 max-w-sm">
+      <div>
+        <p class="font-display text-4xl text-dc-yellow">+30</p>
+        <p class="text-paper/40 text-xs mt-1 leading-tight">Proyectos entregados</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl text-dc-yellow">5+</p>
+        <p class="text-paper/40 text-xs mt-1 leading-tight">Años de experiencia</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl text-dc-yellow">100%</p>
+        <p class="text-paper/40 text-xs mt-1 leading-tight">Clientes satisfechos</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none">
+    <span class="text-paper/30 text-[10px] tracking-widest uppercase">scroll</span>
+    <div class="scroll-line w-px h-10 bg-gradient-to-b from-paper/40 to-transparent"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SERVICES  ·  light
+══════════════════════════════════════════ -->
+<section id="servicios" class="bg-paper relative py-24 px-6 md:px-12 overflow-hidden">
+  <span class="sec-num text-ink">01</span>
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="reveal mb-16">
+      <span class="inline-flex items-center gap-2 text-dc-red text-xs font-semibold tracking-[.22em] uppercase">
+        <span class="w-6 h-px bg-dc-red"></span>Lo que hacemos
+      </span>
+      <h2 class="font-display text-ink mt-3 leading-none"
+          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+        SOLUCIONES QUE<br>TRANSFORMAN
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <!-- Diseño Web -->
+      <article class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal">
+        <div class="w-11 h-11 rounded-xl bg-dc-blue flex items-center justify-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="3" width="20" height="14" rx="2" stroke="white" stroke-width="2"/>
+            <path d="M8 21h8M12 17v4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="font-display text-5xl text-ink/8 leading-none">01</span>
+        <h3 class="font-display text-2xl text-ink mt-1 mb-4 tracking-wide">DISEÑO WEB</h3>
+        <p class="text-ink/55 text-sm leading-relaxed">
+          Páginas personalizadas que convierten. Diseño moderno, responsivo y optimizado para resultados reales en tu negocio.
+        </p>
+        <div class="mt-6 flex items-center gap-1.5 text-dc-blue text-sm font-semibold">
+          Conocer más <span>→</span>
+        </div>
+      </article>
+
+      <!-- Desarrollo de Apps -->
+      <article class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal" style="animation-delay:.08s;">
+        <div class="w-11 h-11 rounded-xl bg-dc-red flex items-center justify-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="5" y="2" width="14" height="20" rx="2" stroke="white" stroke-width="2"/>
+            <circle cx="12" cy="17" r="1" fill="white"/>
+          </svg>
+        </div>
+        <span class="font-display text-5xl text-ink/8 leading-none">02</span>
+        <h3 class="font-display text-2xl text-ink mt-1 mb-4 tracking-wide">DESARROLLO DE APPS</h3>
+        <p class="text-ink/55 text-sm leading-relaxed">
+          Automatiza tu negocio con software a medida. Mejoramos el control, la productividad y la experiencia de tus clientes.
+        </p>
+        <div class="mt-6 flex items-center gap-1.5 text-dc-red text-sm font-semibold">
+          Conocer más <span>→</span>
+        </div>
+      </article>
+
+      <!-- Crecimiento Digital -->
+      <article class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal" style="animation-delay:.16s;">
+        <div class="w-11 h-11 rounded-xl bg-dc-yellow flex items-center justify-center mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M3 17l4-4 4 4 4-5 4-4" stroke="#080910" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="font-display text-5xl text-ink/8 leading-none">03</span>
+        <h3 class="font-display text-2xl text-ink mt-1 mb-4 tracking-wide">CRECIMIENTO DIGITAL</h3>
+        <p class="text-ink/55 text-sm leading-relaxed">
+          SEO, redes sociales y visibilidad online para llevar tu marca donde están tus clientes potenciales.
+        </p>
+        <div class="mt-6 flex items-center gap-1.5 text-ink/40 text-sm font-semibold">
+          Conocer más <span>→</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal mt-12 text-center">
+      <a href="https://wa.me/573132635848" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 bg-ink text-paper font-semibold px-8 py-4
+                rounded-full hover:bg-ink/85 transition-colors duration-300 text-sm">
+        Cuéntanos de tu proyecto →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CLIENTS  ·  dark
+══════════════════════════════════════════ -->
+<section id="clientes" class="bg-ink-2 relative py-24 px-6 md:px-12 overflow-hidden">
+  <span class="sec-num text-paper">02</span>
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-dc-blue/50 to-transparent"></div>
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="reveal mb-16">
+      <span class="inline-flex items-center gap-2 text-dc-yellow text-xs font-semibold tracking-[.22em] uppercase">
+        <span class="w-6 h-px bg-dc-yellow"></span>Nuestros clientes
+      </span>
+      <h2 class="font-display text-paper mt-3 leading-none"
+          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+        EMPRESAS QUE<br>CONFIARON EN NOSOTROS
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <!-- Biotek -->
+      <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-xl overflow-hidden bg-white/10 flex-shrink-0">
+            <img src="/img/biotek_logo.png" alt="Logo Biotek laboratorio clínico" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-paper tracking-wide">BIOTEK</h3>
+            <span class="text-paper/35 text-xs">Laboratorio Clínico</span>
+          </div>
+        </div>
+        <p class="text-paper/55 text-sm leading-relaxed">
+          "Eliminamos las tareas manuales en registros de pacientes, entrega de resultados, facturación y administración del laboratorio."
+        </p>
+        <div class="mt-6 pt-5 border-t border-white/8 flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-dc-blue flex items-center justify-center text-xs font-bold text-white flex-shrink-0">C</div>
+          <span class="text-paper/40 text-xs">Dra. Claudia Buitrago</span>
+        </div>
+      </article>
+
+      <!-- Casa Angel -->
+      <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal" style="animation-delay:.08s;">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-xl overflow-hidden bg-white/10 flex-shrink-0">
+            <img src="/img/casa_angel_logo.jpg" alt="Logo Casa Angel casa de eventos" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-paper tracking-wide">CASA ANGEL</h3>
+            <span class="text-paper/35 text-xs">Casa de Eventos</span>
+          </div>
+        </div>
+        <p class="text-paper/55 text-sm leading-relaxed">
+          "Digitalizamos la gestión de reservas y eventos, mejorando la experiencia de nuestros clientes y la eficiencia del equipo."
+        </p>
+        <div class="mt-6 pt-5 border-t border-white/8 flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-dc-red flex items-center justify-center text-xs font-bold text-white flex-shrink-0">R</div>
+          <span class="text-paper/40 text-xs">Rubén</span>
+        </div>
+      </article>
+
+      <!-- Savatech -->
+      <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal" style="animation-delay:.16s;">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-xl overflow-hidden bg-white/10 flex-shrink-0">
+            <img src="/img/sava_logo.jpg" alt="Logo Savatech comercio de tecnología" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-display text-xl text-paper tracking-wide">SAVATECH</h3>
+            <span class="text-paper/35 text-xs">Comercio de Tecnología</span>
+          </div>
+        </div>
+        <p class="text-paper/55 text-sm leading-relaxed">
+          "Una plataforma moderna que mejoró la presentación de productos y aceleró nuestras ventas con una experiencia de compra optimizada."
+        </p>
+        <div class="mt-6 pt-5 border-t border-white/8 flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-dc-yellow flex items-center justify-center text-xs font-bold text-ink flex-shrink-0">S</div>
+          <span class="text-paper/40 text-xs">Savatech</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PROCESS  ·  light
+══════════════════════════════════════════ -->
+<section id="proceso" class="bg-paper-2 relative py-24 px-6 md:px-12 overflow-hidden">
+  <span class="sec-num text-ink">03</span>
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="reveal mb-16">
+      <span class="inline-flex items-center gap-2 text-dc-blue text-xs font-semibold tracking-[.22em] uppercase">
+        <span class="w-6 h-px bg-dc-blue"></span>Nuestro proceso
+      </span>
+      <h2 class="font-display text-ink mt-3 leading-none"
+          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+        ASÍ TRABAJAMOS<br>CONTIGO
+      </h2>
+    </div>
+
+    <div class="space-y-2" id="accordion">
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
+                onclick="toggleTab(this)" aria-expanded="true">
+          <span class="tab-num font-display text-5xl text-dc-red w-14 flex-shrink-0 transition-colors">01</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">CONSULTORÍA INICIAL</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+            Analizamos tus necesidades, objetivos de negocio y el estado actual de tu presencia digital para construir un plan claro y alcanzable.
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
+                onclick="toggleTab(this)" aria-expanded="false">
+          <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">02</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">DISEÑO Y DESARROLLO</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+            Creamos tu solución a medida: visualmente atractiva, funcional y optimizada. Te mantenemos informado en cada etapa del proceso creativo.
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
+                onclick="toggleTab(this)" aria-expanded="false">
+          <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">03</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">LANZAMIENTO</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+            Desplegamos tu proyecto con las mejores prácticas de rendimiento y seguridad. Pruebas exhaustivas antes de salir al aire para garantizar cero errores.
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
+                onclick="toggleTab(this)" aria-expanded="false">
+          <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">04</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">SEGUIMIENTO Y CRECIMIENTO</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+            Monitoreamos el rendimiento y te acompañamos en el crecimiento continuo. Tu negocio evoluciona — tu plataforma digital también.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     WHY US  ·  dark
+══════════════════════════════════════════ -->
+<section id="nosotros" class="bg-ink relative py-24 px-6 md:px-12 overflow-hidden">
+  <span class="sec-num text-paper">04</span>
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-dc-yellow/30 to-transparent"></div>
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="reveal mb-16">
+      <span class="inline-flex items-center gap-2 text-dc-yellow text-xs font-semibold tracking-[.22em] uppercase">
+        <span class="w-6 h-px bg-dc-yellow"></span>Por qué elegirnos
+      </span>
+      <h2 class="font-display text-paper mt-3 leading-none"
+          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+        LO QUE NOS<br>DISTINGUE
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal">
+        <img src="/svg/Award.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">SEGURIDAD</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Medidas robustas para proteger tu sitio y los datos de tus clientes.</p>
+      </div>
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.04s;">
+        <img src="/svg/devices.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">RESPONSIVE</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Experiencia perfecta en móvil, tablet y escritorio sin excepciones.</p>
+      </div>
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.08s;">
+        <img src="/svg/Calendar.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">SEO</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Aparecer primero en Google no es suerte — es estrategia y técnica.</p>
+      </div>
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.12s;">
+        <img src="/svg/Bookmark.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">DISEÑO MODERNO</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Tendencias actuales de diseño que se traducen en más conversiones.</p>
+      </div>
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.16s;">
+        <img src="/svg/Camera.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">REDES SOCIALES</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Integración estratégica para maximizar tu presencia online.</p>
+      </div>
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.20s;">
+        <img src="/svg/Docs.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">GESTIÓN CMS</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Actualiza tu contenido sin conocimientos técnicos, fácil y rápido.</p>
+      </div>
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.24s;">
+        <img src="/svg/Piechart.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">ANALÍTICA</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Datos en tiempo real sobre el comportamiento de tus visitantes.</p>
+      </div>
+
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.28s;">
+        <img src="/svg/Download.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
+        <h3 class="font-display text-lg text-paper tracking-wide mb-2">VELOCIDAD</h3>
+        <p class="text-paper/40 text-xs leading-relaxed">Sitios optimizados para cargar rápido y escalar en los buscadores.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CTA BAND  ·  red
+══════════════════════════════════════════ -->
+<section class="bg-dc-red relative py-24 px-6 md:px-12 overflow-hidden">
+  <!-- grid overlay -->
+  <div class="absolute inset-0 pointer-events-none"
+       style="background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+              linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+              background-size:48px 48px;"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative">
+    <h2 class="font-display text-white reveal leading-none"
+        style="font-size:clamp(2.8rem,8vw,6rem);">
+      ¿LISTO PARA LLEVAR<br>TU NEGOCIO<br>AL PRÓXIMO NIVEL?
+    </h2>
+    <p class="reveal text-white/65 mt-6 text-lg">La primera consulta es sin costo. Hablemos hoy.</p>
+    <a href="https://wa.me/573132635848" target="_blank" rel="noopener noreferrer"
+       class="reveal mt-8 inline-flex items-center gap-2 bg-white text-dc-red font-bold
+              px-10 py-5 rounded-full text-base hover:bg-paper transition-colors duration-300">
+      Escríbenos por WhatsApp →
+    </a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER  ·  dark
+══════════════════════════════════════════ -->
+<footer class="bg-ink pt-16 pb-8 px-6 md:px-12 border-t border-white/8">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+      <!-- Brand -->
+      <div>
+        <a href="#inicio" class="flex items-center gap-3 mb-4 group" aria-label="DinamyCode inicio">
+          <img src="/img/dc.svg" alt="DinamyCode" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+          <span class="font-display text-2xl text-paper tracking-widest">DINAMYCODE</span>
+        </a>
+        <p class="text-paper/35 text-sm leading-relaxed max-w-xs">
+          Agencia de diseño web y desarrollo de software en Bogotá, Colombia. Transformamos negocios con tecnología.
+        </p>
+      </div>
+
+      <!-- Nav -->
+      <div>
+        <h2 class="font-display text-paper text-lg tracking-widest mb-5">NAVEGACIÓN</h2>
+        <ul class="space-y-2.5">
+          <li><a href="#servicios" class="text-paper/40 text-sm hover:text-paper transition-colors">Servicios</a></li>
+          <li><a href="#clientes"  class="text-paper/40 text-sm hover:text-paper transition-colors">Clientes</a></li>
+          <li><a href="#proceso"   class="text-paper/40 text-sm hover:text-paper transition-colors">Proceso</a></li>
+          <li><a href="#nosotros"  class="text-paper/40 text-sm hover:text-paper transition-colors">Por qué nosotros</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h2 class="font-display text-paper text-lg tracking-widest mb-5">CONTACTO</h2>
+        <address class="not-italic space-y-1.5 text-sm text-paper/40">
+          <p>Dg. 69c Sur #78C-36</p>
+          <p>Bogotá, Colombia</p>
+          <a href="tel:+573132635848" class="block hover:text-paper transition-colors">+57 313 263 5848</a>
+        </address>
+        <!-- Social -->
+        <div class="flex items-center gap-3 mt-6">
+          <a href="#" aria-label="Facebook de DinamyCode"
+             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-white/50 transition-colors">
+            <img src="/svg/Facebook.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true">
+          </a>
+          <a href="#" aria-label="Instagram de DinamyCode"
+             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-white/50 transition-colors">
+            <img src="/svg/Instagram.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true">
+          </a>
+          <a href="https://www.linkedin.com/company/dinamycode/" target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn de DinamyCode"
+             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-white/50 transition-colors">
+            <img src="/svg/Linkedin.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true">
+          </a>
+          <a href="https://wa.me/573132635848" target="_blank" rel="noopener noreferrer"
+             aria-label="WhatsApp de DinamyCode"
+             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-white/50 transition-colors">
+            <img src="/svg/WhatsApp.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-paper/25 text-xs">DinamyCode &copy; 2025 · Todos los derechos reservados.</p>
+      <p class="text-paper/20 text-xs">Hecho con ♥ en Bogotá, Colombia</p>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+  // ── Accordion ───────────────────────────────────────
+  function toggleTab(btn) {
+    const wrap = btn.closest('.tab-wrap');
+    const isOpen = wrap.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.tab-wrap').forEach(w => {
+      w.classList.remove('open');
+      w.querySelector('button').setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      wrap.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Open first tab on load
+  const first = document.querySelector('.tab-wrap');
+  if (first) {
+    first.classList.add('open');
+    first.querySelector('button').setAttribute('aria-expanded', 'true');
+  }
+</script>
+
 </body>
-
 </html>
