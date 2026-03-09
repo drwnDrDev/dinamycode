@@ -12,6 +12,7 @@
   <meta name="author" content="DinamyCode">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#080910">
+  <link rel="manifest" href="/manifest.json">
   <link rel="canonical" href="https://dinamycode.com/">
 
   <!-- Open Graph -->
@@ -74,6 +75,10 @@
       background-color: #1E2035;
       color: #F4F3EE;
       overflow-x: hidden;
+    }
+
+    .text-clamp-heading {
+      font-size: clamp(2.6rem, 7vw, 5.5rem);
     }
 
     /* ─── Scroll-driven reveals ─────────────────────────── */
@@ -244,6 +249,12 @@
       user-select: none;
       letter-spacing: -.02em;
     }
+
+    /* ─── Hero headline ────────────────────────────────── */
+    .hero-h1 {
+      font-size: clamp(3.6rem, 10vw, 8rem);
+      letter-spacing: -.01em;
+    }
   </style>
 
   <!-- JSON-LD: LocalBusiness -->
@@ -323,10 +334,11 @@
 <section id="inicio" class="relative min-h-screen flex flex-col justify-center
                              px-6 md:px-12 pt-28 pb-16 overflow-hidden bg-ink grid-bg">
 
-  <!-- Color blobs -->
-  <div class="blob w-[550px] h-[550px] bg-dc-blue   opacity-20 -top-24 -right-40"  style="animation-duration:10s;"></div>
-  <div class="blob w-[380px] h-[380px] bg-dc-red    opacity-15 -bottom-20 -left-20" style="animation-duration:13s; animation-delay:-4s;"></div>
-  <div class="blob w-[280px] h-[280px] bg-dc-yellow opacity-12 top-1/2 left-1/3"   style="animation-duration:9s;  animation-delay:-7s;"></div>
+    <!-- Color blobs -->
+    <div class="blob blob-1 w-[550px] h-[550px] bg-dc-blue   opacity-20 -top-24 -right-40"></div>
+    <div class="blob blob-2 w-[380px] h-[380px] bg-dc-red    opacity-15 -bottom-20 -left-20"></div>
+    <div class="blob blob-3 w-[280px] h-[280px] bg-dc-yellow opacity-12 top-1/2 left-1/3"></div>
+  </replace>
 
   <div class="relative z-10 max-w-6xl mx-auto w-full">
 
@@ -337,7 +349,7 @@
     </div>
 
     <!-- Headline -->
-    <h1 class="font-display text-paper leading-none" style="font-size: clamp(3.6rem,10vw,8rem); letter-spacing:-.01em;">
+    <h1 class="font-display text-paper leading-none hero-h1">
       <span class="h2 block">DISEÑAMOS</span>
       <span class="h3 block">EL&nbsp;<span class="text-dc-red">FUTURO</span></span>
       <span class="h4 block">DIGITAL.</span>
@@ -399,8 +411,7 @@
       <span class="inline-flex items-center gap-2 text-dc-red text-xs font-semibold tracking-[.22em] uppercase">
         <span class="w-6 h-px bg-dc-red"></span>Lo que hacemos
       </span>
-      <h2 class="font-display text-ink mt-3 leading-none"
-          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+      <h2 class="font-display text-ink mt-3 leading-none text-clamp-heading">
         SOLUCIONES QUE<br>TRANSFORMAN
       </h2>
     </div>
@@ -426,7 +437,7 @@
       </article>
 
       <!-- Desarrollo de Apps -->
-      <article class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal" style="animation-delay:.08s;">
+      <article class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal delay-1">
         <div class="w-11 h-11 rounded-xl bg-dc-red flex items-center justify-center mb-5">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <rect x="5" y="2" width="14" height="20" rx="2" stroke="white" stroke-width="2"/>
@@ -444,7 +455,7 @@
       </article>
 
       <!-- Crecimiento Digital -->
-      <article class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal" style="animation-delay:.16s;">
+      <article class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal delay-2">
         <div class="w-11 h-11 rounded-xl bg-dc-yellow flex items-center justify-center mb-5">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M3 17l4-4 4 4 4-5 4-4" stroke="#080910" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -488,8 +499,7 @@
       <span class="inline-flex items-center gap-2 text-dc-yellow text-xs font-semibold tracking-[.22em] uppercase">
         <span class="w-6 h-px bg-dc-yellow"></span>Nuestros clientes
       </span>
-      <h2 class="font-display text-paper mt-3 leading-none"
-          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+      <h2 class="font-display text-paper mt-3 leading-none text-clamp-heading">
         EMPRESAS QUE<br>CONFIARON EN NOSOTROS
       </h2>
     </div>
@@ -500,7 +510,7 @@
       <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal">
         <div class="flex items-center gap-4 mb-6">
           <div class="w-14 h-14 rounded-xl overflow-hidden bg-white/10 flex-shrink-0">
-            <img src="/img/biotek_logo.png" alt="Logo Biotek laboratorio clínico" class="w-full h-full object-cover">
+            <img src="https://biotek.dinamycode.com/android-chrome-192x192.png" alt="Logo Biotek laboratorio clínico" class="w-full h-full object-cover">
           </div>
           <div>
             <h3 class="font-display text-xl text-paper tracking-wide">BIOTEK</h3>
@@ -517,10 +527,10 @@
       </article>
 
       <!-- Casa Angel -->
-      <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal" style="animation-delay:.08s;">
+      <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal delay-1">
         <div class="flex items-center gap-4 mb-6">
           <div class="w-14 h-14 rounded-xl overflow-hidden bg-white/10 flex-shrink-0">
-            <img src="/img/casa_angel_logo.jpg" alt="Logo Casa Angel casa de eventos" class="w-full h-full object-cover">
+            <img src="https://www.eventoscasaangel.com/images/casaangel.svg" alt="Logo Casa Angel casa de eventos" class="w-full h-full object-cover">
           </div>
           <div>
             <h3 class="font-display text-xl text-paper tracking-wide">CASA ANGEL</h3>
@@ -537,7 +547,7 @@
       </article>
 
       <!-- Savatech -->
-      <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal" style="animation-delay:.16s;">
+      <article class="proj-card bg-ink-card border border-white/8 rounded-2xl p-8 reveal delay-2">
         <div class="flex items-center gap-4 mb-6">
           <div class="w-14 h-14 rounded-xl overflow-hidden bg-white/10 flex-shrink-0">
             <img src="/img/sava_logo.jpg" alt="Logo Savatech comercio de tecnología" class="w-full h-full object-cover">
@@ -573,8 +583,7 @@
       <span class="inline-flex items-center gap-2 text-dc-blue text-xs font-semibold tracking-[.22em] uppercase">
         <span class="w-6 h-px bg-dc-blue"></span>Nuestro proceso
       </span>
-      <h2 class="font-display text-ink mt-3 leading-none"
-          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+      <h2 class="font-display text-ink mt-3 leading-none text-clamp-heading">
         ASÍ TRABAJAMOS<br>CONTIGO
       </h2>
     </div>
@@ -591,7 +600,7 @@
           </svg>
         </button>
         <div class="tab-body">
-          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
             Analizamos tus necesidades, objetivos de negocio y el estado actual de tu presencia digital para construir un plan claro y alcanzable.
           </p>
         </div>
@@ -607,7 +616,7 @@
           </svg>
         </button>
         <div class="tab-body">
-          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
             Creamos tu solución a medida: visualmente atractiva, funcional y optimizada. Te mantenemos informado en cada etapa del proceso creativo.
           </p>
         </div>
@@ -623,7 +632,7 @@
           </svg>
         </button>
         <div class="tab-body">
-          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
             Desplegamos tu proyecto con las mejores prácticas de rendimiento y seguridad. Pruebas exhaustivas antes de salir al aire para garantizar cero errores.
           </p>
         </div>
@@ -639,7 +648,7 @@
           </svg>
         </button>
         <div class="tab-body">
-          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed" style="padding-left:calc(1.5rem + 3.5rem + 1.25rem);">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
             Monitoreamos el rendimiento y te acompañamos en el crecimiento continuo. Tu negocio evoluciona — tu plataforma digital también.
           </p>
         </div>
@@ -663,8 +672,7 @@
       <span class="inline-flex items-center gap-2 text-dc-yellow text-xs font-semibold tracking-[.22em] uppercase">
         <span class="w-6 h-px bg-dc-yellow"></span>Por qué elegirnos
       </span>
-      <h2 class="font-display text-paper mt-3 leading-none"
-          style="font-size:clamp(2.6rem,7vw,5.5rem);">
+      <h2 class="font-display text-paper mt-3 leading-none text-clamp-heading">
         LO QUE NOS<br>DISTINGUE
       </h2>
     </div>
@@ -677,43 +685,43 @@
         <p class="text-paper/40 text-xs leading-relaxed">Medidas robustas para proteger tu sitio y los datos de tus clientes.</p>
       </div>
 
-      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.04s;">
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-3">
         <img src="/svg/devices.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">RESPONSIVE</h3>
         <p class="text-paper/40 text-xs leading-relaxed">Experiencia perfecta en móvil, tablet y escritorio sin excepciones.</p>
       </div>
 
-      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.08s;">
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-1">
         <img src="/svg/Calendar.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">SEO</h3>
         <p class="text-paper/40 text-xs leading-relaxed">Aparecer primero en Google no es suerte — es estrategia y técnica.</p>
       </div>
 
-      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.12s;">
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-4">
         <img src="/svg/Bookmark.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">DISEÑO MODERNO</h3>
         <p class="text-paper/40 text-xs leading-relaxed">Tendencias actuales de diseño que se traducen en más conversiones.</p>
       </div>
 
-      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.16s;">
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-2">
         <img src="/svg/Camera.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">REDES SOCIALES</h3>
         <p class="text-paper/40 text-xs leading-relaxed">Integración estratégica para maximizar tu presencia online.</p>
       </div>
 
-      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.20s;">
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-5">
         <img src="/svg/Docs.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">GESTIÓN CMS</h3>
         <p class="text-paper/40 text-xs leading-relaxed">Actualiza tu contenido sin conocimientos técnicos, fácil y rápido.</p>
       </div>
 
-      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.24s;">
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-6">
         <img src="/svg/Piechart.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">ANALÍTICA</h3>
         <p class="text-paper/40 text-xs leading-relaxed">Datos en tiempo real sobre el comportamiento de tus visitantes.</p>
       </div>
 
-      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal" style="animation-delay:.28s;">
+      <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-7">
         <img src="/svg/Download.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">VELOCIDAD</h3>
         <p class="text-paper/40 text-xs leading-relaxed">Sitios optimizados para cargar rápido y escalar en los buscadores.</p>
@@ -729,14 +737,10 @@
 ══════════════════════════════════════════ -->
 <section class="bg-dc-red relative py-24 px-6 md:px-12 overflow-hidden">
   <!-- grid overlay -->
-  <div class="absolute inset-0 pointer-events-none"
-       style="background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
-              linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
-              background-size:48px 48px;"></div>
+  <div class="absolute inset-0 pointer-events-none grid-bg"></div>
 
   <div class="max-w-4xl mx-auto text-center relative">
-    <h2 class="font-display text-white reveal leading-none"
-        style="font-size:clamp(2.8rem,8vw,6rem);">
+    <h2 class="font-display text-white reveal leading-none text-clamp-heading">
       ¿LISTO PARA LLEVAR<br>TU NEGOCIO<br>AL PRÓXIMO NIVEL?
     </h2>
     <p class="reveal text-white/65 mt-6 text-lg">La primera consulta es sin costo. Hablemos hoy.</p>
