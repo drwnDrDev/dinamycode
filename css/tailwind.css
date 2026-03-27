@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@source "../index.html";
+@source "../js/**/*.js";
+
+@theme {
+  --color-dc-red: #c2407e;
+  --color-dc-blue: #0abfab;
+  --color-dc-yellow: #90ffe8;
+  --color-ink: #1e2035;
+  --color-ink-2: #191a2d;
+  --color-ink-card: #13142a;
+  --color-paper: #f4f3ee;
+  --color-paper-2: #eceae1;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Manrope", sans-serif;
+}

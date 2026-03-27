@@ -11,7 +11,7 @@
   <meta name="keywords" content="diseño web bogotá, desarrollo de software colombia, agencia digital bogotá, aplicaciones web a medida, posicionamiento SEO colombia, DinamyCode">
   <meta name="author" content="DinamyCode">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#080910">
+  <meta name="color-scheme" content="dark">
   <link rel="manifest" href="/manifest.json">
   <link rel="canonical" href="https://dinamycode.com/">
 
@@ -35,227 +35,15 @@
   <!-- Favicon -->
   <link rel="icon" href="/img/logo.png" type="image/svg+xml">
   <link rel="shortcut icon" href="/img/logo.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/logo.png">
 
   <!-- Fonts: Bebas Neue (display) + Manrope (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'dc-red':    '#C2407E',
-            'dc-blue':   '#0ABFAB',
-            'dc-yellow': '#90FFE8',
-            'ink':       '#1E2035',
-            'ink-2':     '#191A2D',
-            'ink-card':  '#13142A',
-            'paper':     '#F4F3EE',
-            'paper-2':   '#ECEAE1',
-          },
-          fontFamily: {
-            display: ['"Bebas Neue"', 'sans-serif'],
-            body:    ['Manrope', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Manrope', sans-serif;
-      background-color: #1E2035;
-      color: #F4F3EE;
-      overflow-x: hidden;
-    }
-
-    .text-clamp-heading {
-      font-size: clamp(2.6rem, 7vw, 5.5rem);
-    }
-
-    /* ─── Scroll-driven reveals ─────────────────────────── */
-    .reveal {
-      animation: reveal-up linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 28%;
-    }
-    .reveal-l {
-      animation: reveal-left linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 28%;
-    }
-    @keyframes reveal-up {
-      from { opacity: 0; transform: translateY(36px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes reveal-left {
-      from { opacity: 0; transform: translateX(-36px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-
-    /* ─── Hero stagger ──────────────────────────────────── */
-    .h1  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .10s both; }
-    .h2  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .28s both; }
-    .h3  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .46s both; }
-    .h4  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .60s both; }
-    .h5  { animation: hero-in .85s cubic-bezier(.22,1,.36,1) .74s both; }
-    @keyframes hero-in {
-      from { opacity: 0; transform: translateY(44px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── Floating blobs ────────────────────────────────── */
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      animation: blob-float ease-in-out infinite;
-      pointer-events: none;
-    }
-    @keyframes blob-float {
-      0%,100% { transform: translateY(0) scale(1); }
-      50%      { transform: translateY(-24px) scale(1.06); }
-    }
-
-    /* ─── Subtle grid overlay ───────────────────────────── */
-    .grid-bg {
-      background-image:
-        linear-gradient(rgba(244,243,238,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(244,243,238,.04) 1px, transparent 1px);
-      background-size: 64px 64px;
-    }
-
-    /* ─── Service cards ─────────────────────────────────── */
-    .svc-card {
-      position: relative;
-      overflow: hidden;
-      transition: transform .45s cubic-bezier(.22,1,.36,1),
-                  box-shadow .45s ease;
-    }
-    .svc-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: #C2407E;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform .4s ease;
-    }
-    .svc-card:hover::before { transform: scaleX(1); }
-    .svc-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 48px rgba(0,0,0,.12);
-    }
-
-    /* ─── Project cards ─────────────────────────────────── */
-    .proj-card {
-      transition: transform .4s cubic-bezier(.22,1,.36,1);
-    }
-    .proj-card:hover { transform: translateY(-8px); }
-
-    /* ─── Tab accordion ─────────────────────────────────── */
-    .tab-body {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height .5s cubic-bezier(.4,0,.2,1),
-                  opacity .35s ease;
-    }
-    .tab-wrap.open .tab-body {
-      max-height: 240px;
-      opacity: 1;
-    }
-    .tab-arrow { transition: transform .3s ease; }
-    .tab-wrap.open .tab-arrow { transform: rotate(180deg); }
-    .tab-wrap.open .tab-num  { color: #C2407E; }
-
-    /* ─── Benefit cards ─────────────────────────────────── */
-    .ben-card {
-      transition: transform .35s ease, background-color .35s ease;
-      position: relative;
-    }
-    .ben-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      height: 2px; width: 0;
-      background: #90FFE8;
-      transition: width .4s ease;
-    }
-    .ben-card:hover { transform: translateY(-3px); background-color: #131525; }
-    .ben-card:hover::after { width: 100%; }
-
-    /* ─── CTA button ────────────────────────────────────── */
-    .btn-red {
-      position: relative;
-      overflow: hidden;
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-    .btn-red::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,.14);
-      transform: translateX(-100%);
-      transition: transform .3s ease;
-    }
-    .btn-red:hover::before { transform: translateX(0); }
-    .btn-red:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(194,64,126,.4);
-    }
-
-    /* ─── Nav link underline ────────────────────────────── */
-    .nl {
-      position: relative;
-      padding-bottom: 2px;
-    }
-    .nl::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0;
-      height: 1px; width: 0;
-      background: #FF0000;
-      transition: width .3s ease;
-    }
-    .nl:hover::after { width: 100%; }
-
-    /* ─── Scroll indicator pulse ────────────────────────── */
-    @keyframes scroll-pulse {
-      0%,100% { opacity: .4; transform: scaleY(1); }
-      50%      { opacity: .8; transform: scaleY(1.3); }
-    }
-    .scroll-line { animation: scroll-pulse 2s ease-in-out infinite; }
-
-    /* ─── Section label number (decorative bg) ──────────── */
-    .sec-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(6rem, 16vw, 14rem);
-      line-height: 1;
-      opacity: .06;
-      position: absolute;
-      top: -1.5rem;
-      right: 2rem;
-      pointer-events: none;
-      user-select: none;
-      letter-spacing: -.02em;
-    }
-
-    /* ─── Hero headline ────────────────────────────────── */
-    .hero-h1 {
-      font-size: clamp(3.6rem, 10vw, 8rem);
-      letter-spacing: -.01em;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/tailwind.min.css">
+  <link rel="stylesheet" href="/css/styles.min.css">
 
   <!-- JSON-LD: LocalBusiness -->
   <script type="application/ld+json">
@@ -310,7 +98,8 @@
             bg-ink/85 backdrop-blur-md border-b border-white/5">
 
   <a href="#inicio" class="flex items-center gap-3 group" aria-label="DinamyCode inicio">
-    <img src="/img/dinamycode_title.png" alt="DinamyCode icono" class="w-auto h-9 transition-transform duration-300 group-hover:scale-110">
+    <img src="/img/dinamycode_title.png" alt="DinamyCode icono" class="hidden sm:flex w-auto h-9 transition-transform duration-300 group-hover:scale-110">
+    <img src="./img/dinamycode_og.png" alt="DC" class="flex sm:hidden w-9 h-9 rounded-full transition-transform duration-300 group-hover:scale-110">
     <span class="hidden font-display text-2xl text-paper tracking-widest">DINAMYCODE</span>
   </a>
 
@@ -328,27 +117,22 @@
 </nav>
 
 
-<!-- ══════════════════════════════════════════
-     HERO  ·  dark
-══════════════════════════════════════════ -->
+
 <section id="inicio" class="relative min-h-screen flex flex-col justify-center
                              px-6 md:px-12 pt-28 pb-16 overflow-hidden bg-ink grid-bg">
 
-    <!-- Color blobs -->
-    <div class="blob blob-1 w-[550px] h-[550px] bg-dc-blue   opacity-20 -top-24 -right-40"></div>
-    <div class="blob blob-2 w-[380px] h-[380px] bg-dc-red    opacity-15 -bottom-20 -left-20"></div>
-    <div class="blob blob-3 w-[280px] h-[280px] bg-dc-yellow opacity-12 top-1/2 left-1/3"></div>
-  </replace>
-
+  
+    <div class="blob blob-1 w-138 h-138 bg-dc-blue   opacity-20 -top-24 -right-40"></div>
+    <div class="blob blob-2 w-138 h-138[380px] bg-dc-red    opacity-15 -bottom-20 -left-20"></div>
+    <div class="blob blob-3 w-70 h-70 bg-dc-yellow[280px] bg-dc-yellow opacity-12 top-1/2 left-1/3"></div>
   <div class="relative z-10 max-w-6xl mx-auto w-full">
 
-    <!-- Eyebrow -->
+ 
     <div class="h1 flex items-center gap-3 mb-10">
       <span class="w-10 h-px bg-dc-red"></span>
       <span class="text-dc-red text-xs font-semibold tracking-[.22em] uppercase">Agencia Digital · Bogotá, Colombia</span>
     </div>
 
-    <!-- Headline -->
     <h1 class="font-display text-paper leading-none hero-h1">
       <span class="h2 block">DISEÑAMOS</span>
       <span class="h3 block">EL&nbsp;<span class="text-dc-red">FUTURO</span></span>
@@ -592,7 +376,7 @@
 
       <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
         <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
-                onclick="toggleTab(this)" aria-expanded="true">
+                data-tab-trigger aria-expanded="true">
           <span class="tab-num font-display text-5xl text-dc-red w-14 flex-shrink-0 transition-colors">01</span>
           <h3 class="font-display text-xl text-ink tracking-wide flex-1">CONSULTORÍA INICIAL</h3>
           <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -608,7 +392,7 @@
 
       <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
         <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
-                onclick="toggleTab(this)" aria-expanded="false">
+                data-tab-trigger aria-expanded="false">
           <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">02</span>
           <h3 class="font-display text-xl text-ink tracking-wide flex-1">DISEÑO Y DESARROLLO</h3>
           <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -624,7 +408,7 @@
 
       <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
         <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
-                onclick="toggleTab(this)" aria-expanded="false">
+                data-tab-trigger aria-expanded="false">
           <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">03</span>
           <h3 class="font-display text-xl text-ink tracking-wide flex-1">LANZAMIENTO</h3>
           <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -640,7 +424,7 @@
 
       <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
         <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors"
-                onclick="toggleTab(this)" aria-expanded="false">
+                data-tab-trigger aria-expanded="false">
           <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">04</span>
           <h3 class="font-display text-xl text-ink tracking-wide flex-1">SEGUIMIENTO Y CRECIMIENTO</h3>
           <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -793,14 +577,7 @@
         </address>
         <!-- Social -->
         <div class="flex items-center gap-3 mt-6">
-          <a href="#" aria-label="Facebook de DinamyCode"
-             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-white/50 transition-colors">
-            <img src="/svg/Facebook.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true">
-          </a>
-          <a href="#" aria-label="Instagram de DinamyCode"
-             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-white/50 transition-colors">
-            <img src="/svg/Instagram.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true">
-          </a>
+
           <a href="https://www.linkedin.com/company/dinamycode/" target="_blank" rel="noopener noreferrer"
              aria-label="LinkedIn de DinamyCode"
              class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-white/50 transition-colors">
@@ -825,31 +602,7 @@
 </footer>
 
 
-<script>
-  // ── Accordion ───────────────────────────────────────
-  function toggleTab(btn) {
-    const wrap = btn.closest('.tab-wrap');
-    const isOpen = wrap.classList.contains('open');
-
-    // Close all
-    document.querySelectorAll('.tab-wrap').forEach(w => {
-      w.classList.remove('open');
-      w.querySelector('button').setAttribute('aria-expanded', 'false');
-    });
-
-    if (!isOpen) {
-      wrap.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  }
-
-  // Open first tab on load
-  const first = document.querySelector('.tab-wrap');
-  if (first) {
-    first.classList.add('open');
-    first.querySelector('button').setAttribute('aria-expanded', 'true');
-  }
-</script>
+<script src="/js/main.min.js"></script>
 
 </body>
 </html>

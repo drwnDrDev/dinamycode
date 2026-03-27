@@ -1,0 +1,26 @@
+{
+  "name": "dinamycode",
+  "version": "1.0.0",
+  "description": "the doog-food project",
+  "main": "index.js",
+  "scripts": {
+    "build:tailwind": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind.min.css --minify",
+    "dev:tailwind": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind.min.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drwnDrDev/dinamycode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drwnDrDev/dinamycode/issues"
+  },
+  "homepage": "https://github.com/drwnDrDev/dinamycode#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
