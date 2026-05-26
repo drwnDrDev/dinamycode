@@ -4,8 +4,9 @@
   "description": "the doog-food project",
   "main": "index.js",
   "scripts": {
-    "build:tailwind": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind.min.css --minify",
-    "dev:tailwind": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind.min.css --watch",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +20,11 @@
     "url": "https://github.com/drwnDrDev/dinamycode/issues"
   },
   "homepage": "https://github.com/drwnDrDev/dinamycode#readme",
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.2.2",
-    "tailwindcss": "^4.2.2"
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
   }
 }

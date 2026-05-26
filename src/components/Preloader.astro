@@ -1,0 +1,48 @@
+---
+// Preloader component - displays on page load, fades when resources are ready
+---
+
+<div id="preloader" aria-hidden="true" role="presentation">
+  <!-- Logo -->
+  <img
+    src="/img/dc.svg"
+    alt=""
+    width="52"
+    height="52"
+    class="w-13 h-13 opacity-80"
+    aria-hidden="true"
+  />
+  <!-- Spinning ring -->
+  <div class="preloader-ring" aria-hidden="true"></div>
+  <!-- Dot pulse -->
+  <div class="preloader-dots" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<script>
+  const preloader = document.getElementById('preloader');
+
+  const hide = () => {
+    if (!preloader) return;
+    preloader.classList.add('loaded');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 700);
+  };
+
+  // Block scroll while loading
+  document.body.style.overflow = 'hidden';
+
+  // Hide after window load or after 3s fallback
+  const timer = setTimeout(hide, 3000);
+
+  window.addEventListener('load', () => {
+    clearTimeout(timer);
+    // Small delay so first paint looks smooth
+    setTimeout(hide, 250);
+  });
+</script>
