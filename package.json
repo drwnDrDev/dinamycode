@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/drwnDrDev/dinamycode#readme",
   "dependencies": {
-    "astro": "^5.0.0"
+    "astro": "^6.3.8"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
