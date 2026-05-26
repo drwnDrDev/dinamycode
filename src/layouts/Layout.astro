@@ -1,25 +1,18 @@
 ---
 // Layout component: includes SEO head, fonts, preloader, navbar, footer, and slot for page content
----
-
----
 // Import components
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Preloader from '../components/Preloader.astro';
----
 
----
 // SEO meta defaults – will be overridden via frontmatter props when needed
-export interface Props {
+interface Props {
   title?: string;
   description?: string;
   image?: string; // og:image URL
   lang?: string;
 }
----
 
----
 const { title = 'DinamyCode – Agencia de diseño web y desarrollo de software',
         description = 'Transformamos negocios con tecnología que convierte visitantes en clientes reales.',
         image = '/og-image.png',
@@ -46,8 +39,6 @@ const { title = 'DinamyCode – Agencia de diseño web y desarrollo de software'
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
-    <!-- Astro prefetch for all internal links – already used in components -->
-    <AstroHead />
   </head>
   <body class="antialiased min-h-screen flex flex-col">
     <!-- Preloader (visible until page fully loaded) -->

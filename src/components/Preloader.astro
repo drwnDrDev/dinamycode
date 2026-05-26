@@ -1,48 +1,83 @@
 ---
-// Preloader component - displays on page load, fades when resources are ready
+// Preloader Premium - elegant loading screen with blur and modern animations
+// Blocks scroll, loads critical resources, then fades out smoothly
 ---
 
 <div id="preloader" aria-hidden="true" role="presentation">
-  <!-- Logo -->
-  <img
-    src="/img/dc.svg"
-    alt=""
-    width="52"
-    height="52"
-    class="w-13 h-13 opacity-80"
-    aria-hidden="true"
-  />
-  <!-- Spinning ring -->
-  <div class="preloader-ring" aria-hidden="true"></div>
-  <!-- Dot pulse -->
-  <div class="preloader-dots" aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
+  <!-- Background blur effect -->
+  <div class="absolute inset-0 backdrop-blur-sm" aria-hidden="true"></div>
+  
+  <!-- Content container -->
+  <div class="relative z-10 flex flex-col items-center justify-center gap-4">
+    <!-- Logo with fade animation -->
+    <img
+      src="/img/dc.svg"
+      alt=""
+      width="56"
+      height="56"
+      class="w-14 h-14 opacity-100 animate-pulse"
+      aria-hidden="true"
+      loading="eager"
+      decoding="async"
+    />
+    
+    <!-- Animated ring (rotates) -->
+    <div class="preloader-ring" aria-hidden="true"></div>
+    
+    <!-- Pulse dots -->
+    <div class="preloader-dots" aria-hidden="true">
+      <span class="block"></span>
+      <span class="block"></span>
+      <span class="block"></span>
+    </div>
+    
+    <!-- Optional: Loading text -->
+    <p class="text-paper/40 text-xs tracking-widest animate-pulse mt-2" aria-hidden="true">
+      Cargando experiencia premium...
+    </p>
   </div>
 </div>
 
 <script>
+  // Preloader management
   const preloader = document.getElementById('preloader');
-
-  const hide = () => {
+  
+  const hidePreloader = () => {
     if (!preloader) return;
+    
+    // Add loaded class for fade animation
     preloader.classList.add('loaded');
+    
+    // Restore body scroll
     document.body.style.overflow = '';
+    
+    // Remove element from DOM after animation completes
     setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 700);
+      if (preloader.parentNode) {
+        preloader.remove();
+      }
+    }, 600);
   };
 
-  // Block scroll while loading
+  // Block scroll immediately
   document.body.style.overflow = 'hidden';
 
-  // Hide after window load or after 3s fallback
-  const timer = setTimeout(hide, 3000);
+  // Fallback timeout (3 seconds)
+  const fallbackTimer = setTimeout(hidePreloader, 3000);
 
-  window.addEventListener('load', () => {
-    clearTimeout(timer);
-    // Small delay so first paint looks smooth
-    setTimeout(hide, 250);
-  });
+  // Hide when all critical resources are loaded
+  const resourcesReady = () => {
+    clearTimeout(fallbackTimer);
+    // Small delay for smooth animation transition
+    requestAnimationFrame(() => {
+      setTimeout(hidePreloader, 250);
+    });
+  };
+
+  // Trigger on window load
+  if (document.readyState === 'complete') {
+    resourcesReady();
+  } else {
+    window.addEventListener('load', resourcesReady, { once: true });
+  }
 </script>

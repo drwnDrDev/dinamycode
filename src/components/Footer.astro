@@ -6,6 +6,14 @@ const isHome = currentPath === '/';
 // Helper: if on home page use hash links, else use absolute links with hash
 const homeLink = (hash: string) => isHome ? hash : `/${hash}`;
 
+const navItems = [
+  { href: '/servicios/', label: 'Servicios', colorClass: 'bg-dc-red' },
+  { href: '/productos/', label: 'Productos', colorClass: 'bg-dc-blue' },
+  { href: homeLink('#clientes'), label: 'Clientes', colorClass: 'bg-dc-yellow' },
+  { href: homeLink('#proceso'), label: 'Proceso', colorClass: 'bg-dc-red' },
+  { href: homeLink('#nosotros'), label: 'Nosotros', colorClass: 'bg-dc-blue' },
+];
+
 const year = new Date().getFullYear();
 ---
 
@@ -58,56 +66,19 @@ const year = new Date().getFullYear();
       <div>
         <h2 class="font-display text-paper text-lg tracking-widest mb-5">NAVEGACIÓN</h2>
         <ul class="space-y-2.5" role="list">
-          <li>
-            <a
-              href="/servicios/"
-              data-astro-prefetch
-              class="text-paper/40 text-sm hover:text-paper transition-colors flex items-center gap-2 group"
-            >
-              <span class="w-1 h-1 rounded-full bg-dc-red opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a
-              href="/productos/"
-              data-astro-prefetch
-              class="text-paper/40 text-sm hover:text-paper transition-colors flex items-center gap-2 group"
-            >
-              <span class="w-1 h-1 rounded-full bg-dc-blue opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Productos
-            </a>
-          </li>
-          <li>
-            <a
-              href={homeLink('#clientes')}
-              data-astro-prefetch
-              class="text-paper/40 text-sm hover:text-paper transition-colors flex items-center gap-2 group"
-            >
-              <span class="w-1 h-1 rounded-full bg-dc-yellow opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Clientes
-            </a>
-          </li>
-          <li>
-            <a
-              href={homeLink('#proceso')}
-              data-astro-prefetch
-              class="text-paper/40 text-sm hover:text-paper transition-colors flex items-center gap-2 group"
-            >
-              <span class="w-1 h-1 rounded-full bg-dc-red opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Proceso
-            </a>
-          </li>
-          <li>
-            <a
-              href={homeLink('#nosotros')}
-              data-astro-prefetch
-              class="text-paper/40 text-sm hover:text-paper transition-colors flex items-center gap-2 group"
-            >
-              <span class="w-1 h-1 rounded-full bg-dc-blue opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              Nosotros
-            </a>
-          </li>
+          {navItems.map(({ href, label, colorClass }) => (
+            <li>
+              <a
+                href={href}
+                data-astro-prefetch
+                class="text-paper/40 text-sm hover:text-paper transition-colors flex items-center gap-2 group smart-nav-link"
+                data-section={href.includes('#') ? href.split('#')[1] : null}
+              >
+                <span class={`w-1 h-1 rounded-full ${colorClass.replace('bg-', 'opacity-0 group-hover:opacity-100 transition-opacity')} opacity-0 group-hover:opacity-100 transition-opacity`} style={`background-color: var(--color-${colorClass.replace('bg-', '')})`}></span>
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -145,14 +116,26 @@ const year = new Date().getFullYear();
   </div>
 </footer>
 
-<!-- Scroll to Top button -->
+<!-- Scroll to Top button with neon effect -->
 <button
   id="scroll-top"
   type="button"
   aria-label="Volver al inicio de la página"
   title="Volver al inicio"
+  class="group"
 >
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c2407e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <svg 
+    width="18" 
+    height="18" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    aria-hidden="true"
+    class="text-dc-red"
+  >
     <path d="M18 15l-6-6-6 6"/>
   </svg>
 </button>
@@ -169,4 +152,35 @@ const year = new Date().getFullYear();
   btn?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // Smart navigation: handle section links on non-home pages
+  const currentPath = window.location.pathname;
+  const isHome = currentPath === '/';
+
+  if (!isHome) {
+    document.querySelectorAll('.smart-nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href?.startsWith('/#')) {
+          e.preventDefault();
+          // Navigate to home and scroll to section
+          const section = href.split('#')[1];
+          window.location.href = `/#${section}`;
+        }
+      });
+    });
+  }
+
+  // Auto-scroll to section if URL has hash on page load
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, { once: true });
 </script>

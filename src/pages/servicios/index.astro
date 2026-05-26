@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Servicios de Diseño Web y Desarrollo de Software | DinamyCode"
+  description="Acelera tu crecimiento con tecnología de vanguardia. ⚡ Desde páginas web optimizadas para SEO y aplicaciones móviles a medida, hasta chatbots inteligentes y agentes autónomos de Inteligencia Artificial. Descubre cómo escalamos tu empresa."
+>
+  <section class="servicios-section">
+    <div class="container">
+      <h1>Nuestros Servicios</h1>
+      <p class="subtitle">Soluciones integrales para transformar tu presencia digital</p>
+      
+      <div class="servicios-grid">
+        <div class="servicio-card">
+          <h3>Diseño Web</h3>
+          <p>Interfaces modernas y atractivas que convierten visitantes en clientes</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Desarrollo Full-Stack</h3>
+          <p>Backend y frontend con tecnologías de punta</p>
+        </div>
+        <div class="servicio-card">
+          <h3>SEO y Posicionamiento</h3>
+          <p>Optimización para aparecer en los primeros resultados de búsqueda</p>
+        </div>
+        <div class="servicio-card">
+          <h3>Consultoría Digital</h3>
+          <p>Asesoramiento experto para tu transformación digital</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .servicios-section {
+    min-height: 60vh;
+    padding: 4rem 2rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+  }
+  
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .servicio-card {
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .servicio-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .servicio-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+</style>
