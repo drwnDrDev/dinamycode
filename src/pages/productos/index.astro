@@ -6,12 +6,35 @@ import Layout from '../../layouts/Layout.astro';
   title="Productos y Soluciones SaaS | DinamyCode"
   description="Conoce nuestras soluciones SaaS diseñadas para resolver problemas reales en Colombia. 🛠️ Desde Asambli (gestión de asambleas PH), hasta Lisapp (laboratorio clínico inteligente) y FotoAleph (eventos y fotografía profesional). Software de alta calidad."
 >
+
+
+
   <section class="productos-section">
     <div class="container">
       <h1>Nuestros Productos</h1>
       <p class="subtitle">Soluciones tecnológicas desarrolladas para optimizar tu negocio</p>
-      
+     
+      <div class="willing-grid">
+        <div class="willing-card bg-blue-400">
+          <h3>Asambli</h3>
+          <p>Gestión de Asambleas de propiedad horizontal</p>
+        </div>
+
+        <div class="willing-card bg-cyan-800">
+          <div>       
+             <a href="https://lissapp.dinamycode.com/" target="_blank" class="btn btn-primary bg-cyan-300 hover:bg-cyan-50 p-2 rounded-md"> <span class="text-3xl">🔬</span>Lissapp</a>
+          </div>
+          <div>
+          <h3>Lissapp</h3>
+          <p>Tu aliado en la gestión de tu laboratorio clínico</p>
+          </div>
+
+        </div>
+
+      </div>
+
       <div class="productos-grid">
+
         <div class="producto-card">
           <h3>Sitios Web</h3>
           <p>Diseño web moderno, responsivo y optimizado para SEO</p>
@@ -57,7 +80,13 @@ import Layout from '../../layouts/Layout.astro';
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
-  
+  .willing-grid {
+    display: grid;
+    grid-template-columns:auto auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
   .producto-card {
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -66,7 +95,18 @@ import Layout from '../../layouts/Layout.astro';
     transition: all 0.3s ease;
   }
   
-  .producto-card:hover {
+  .willing-card {
+    padding: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.893);
+    border-radius: 0.5rem;
+    background-image: url('/img/ads.png');
+    transition: all 0.3s ease;
+  }
+  
+  
+
+  .producto-card:hover,
+  .willing-card:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
   }
