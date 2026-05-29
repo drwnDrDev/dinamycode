@@ -1,36 +1,243 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout
   title="Servicios de Diseño Web y Desarrollo de Software | DinamyCode"
   description="Acelera tu crecimiento con tecnología de vanguardia. ⚡ Desde páginas web optimizadas para SEO y aplicaciones móviles a medida, hasta chatbots inteligentes y agentes autónomos de Inteligencia Artificial. Descubre cómo escalamos tu empresa."
 >
-  <section class="servicios-section">
-    <div class="container">
-      <h1>Nuestros Servicios</h1>
-      <p class="subtitle">Soluciones integrales para transformar tu presencia digital</p>
-      
-      <div class="servicios-grid">
-        <div class="servicio-card">
-          <h3>Diseño Web</h3>
-          <p>Interfaces modernas y atractivas que convierten visitantes en clientes</p>
-        </div>
-        <div class="servicio-card">
-          <h3>Desarrollo Full-Stack</h3>
-          <p>Backend y frontend con tecnologías de punta</p>
-        </div>
-        <div class="servicio-card">
-          <h3>SEO y Posicionamiento</h3>
-          <p>Optimización para aparecer en los primeros resultados de búsqueda</p>
-        </div>
-        <div class="servicio-card">
-          <h3>Consultoría Digital</h3>
-          <p>Asesoramiento experto para tu transformación digital</p>
-        </div>
+  <section
+    id="servicios"
+    class="bg-paper dark:bg-cyan-950 relative py-24 px-6 md:px-12 overflow-hidden"
+  >
+    <div class="sec-num text-ink">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 111.48"
+        ><path
+          d="M50.21 38.57A17.17 17.17 0 1 1 33 55.74a17.17 17.17 0 0 1 17.21-17.17M91.31 94v-8.72H67.46a44 44 0 0 0 5.64-6.17h21.28a3.09 3.09 0 0 1 3.08 3.07V94a9 9 0 1 1-6.15 0m-2.15-63.29H75.51A45 45 0 0 0 71 24.55h15.09v-7a9 9 0 1 1 6.15-.06v10.15a3.07 3.07 0 0 1-3.08 3.07M122.88 15a9 9 0 1 0-12.65 8.25v18H80.12a43.4 43.4 0 0 1 1.27 6.16h31.91a3.09 3.09 0 0 0 3.07-3.08V23.67a9 9 0 0 0 6.51-8.67m-.15 49.93a9 9 0 0 0-17.49-3.08H80.88A42 42 0 0 1 79.14 68h26.1a9 9 0 0 0 17.49-3.07M49.56 105.3H46a6.13 6.13 0 0 1-6.12-6.11v-6.26a38.1 38.1 0 0 1-10-3.78l-4.18 4.18a6.13 6.13 0 0 1-8.65 0L12 88.24a6.14 6.14 0 0 1 0-8.65l3.81-3.81a38 38 0 0 1-4.47-10.33H6.12A6.13 6.13 0 0 1 0 59.34v-7.2A6.13 6.13 0 0 1 6.12 46h5.12a38 38 0 0 1 4.44-10.44L12 31.88a6.14 6.14 0 0 1 0-8.64l5.09-5.09a6.13 6.13 0 0 1 8.65 0l4 4a38 38 0 0 1 10.13-3.87v-6A6.13 6.13 0 0 1 46 6.18h7.19A6.13 6.13 0 0 1 59.27 12v20.48A24.5 24.5 0 0 0 50.84 31h-2.55a24.61 24.61 0 1 0 0 49.21h2.55a24.5 24.5 0 0 0 8.43-1.48v20.75a6.13 6.13 0 0 1-6.11 5.82Z"
+          style="fill-rule:inherit"></path></svg
+      >
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal mb-16">
+        <span
+          class="inline-flex items-center gap-2 text-dc-red text-xs font-semibold tracking-[.22em] uppercase"
+        >
+          <span class="w-6 h-px bg-dc-red dark:text-white"></span>Lo que hacemos
+        </span>
+        <h2
+          class="font-display text-ink mt-3 leading-none text-clamp-heading dark:text-white"
+        >
+          SOLUCIONES QUE TRANSFORMAN
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Diseño Web -->
+        <article
+          class="svc-card bg-white dark:bg-black rounded-2xl p-8 border border-ink/8 reveal"
+        >
+          <h3
+            class="font-display flex gap-2 justify-start items-center text-2xl text-ink mt-1 mb-4 tracking-wide dark:text-cyan-300"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <rect
+                x="2"
+                y="3"
+                width="20"
+                height="14"
+                rx="2"
+                stroke="white"
+                stroke-width="2"></rect>
+              <path
+                d="M8 21h8M12 17v4"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+            DISEÑO WEB
+          </h3>
+          <p class="text-ink/55 text-sm leading-relaxed dark:text-gray-300">
+            Creamos <span class="font-bold">páginas web </span> personalizadas, con
+            un diseño <span class="font-semibold">moderno</span> y responsivo, que
+            se adaptan a cualquier dispositivo y reflejan <span
+              class="font-bold text-ink-66 dark:text-gray-100"
+              >la esencia de tu marca.</span
+            >
+          </p>
+          <p class="text-ink/55 text-sm leading-relaxed dark:text-gray-300">
+            Diseñamos sitios atractivos y los optimizamos para que conviertan
+            visitantes en oportunidades de negocio.Tu sitio web será un
+            escaparate y el <span
+              class="font-bold text-ink-66 dark:text-gray-100"
+              >motor de crecimiento de tu empresa</span
+            > en la economia digital
+          </p>
+          <div
+            class="mt-6 flex items-center gap-1.5 text-dc-blue text-sm font-semibold"
+          >
+            Conocer más <span>→</span>
+          </div>
+        </article>
+
+        <!-- Desarrollo de Apps -->
+        <article
+          class="svc-card bg-white rounded-2xl p-8 border border-ink/8 reveal delay-1 dark:bg-black"
+        >
+          <h3
+            class="font-display flex justify-star gap-4 items-center dark:text-dc-red text-2xl text-ink mt-1 mb-4 tracking-wide"
+          >
+            <svg width="20" height="24" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="5"
+                y="2"
+                width="14"
+                height="22"
+                rx="2"
+                stroke="currentColor"
+                stroke-width="2"></rect>
+              <circle cx="12" cy="17" r="1" fill="currentColor"></circle>
+            </svg>
+            DESARROLLO DE APPS
+          </h3>
+          <p class="text-ink/55 text-sm leading-relaxed dark:text-gray-300">
+           <span class="font-bold text-ink/88 dark:text-gray-100">Software</span>  a medida. Creamos <span class="font-semibold text-ink/88 dark:text-gray-100">aplicaciones</span>  que automatizan procesos,
+            mejoran el <span class="font-semibold text-ink/88 dark:text-gray-100">control interno</span>  y aumentan la <span class="font-semibold text-ink/88 dark:text-gray-100">productividad</span> de tu <span class="font-semibold text-ink/88 dark:text-gray-100">equipo.</span>
+          </p>
+          <p class="text-ink/55 text-sm leading-relaxed dark:text-gray-300">
+            Nuestras soluciones no solo optimizan tu operación, también elevan
+            la experiencia de tus clientes, ofreciendo rapidez, simplicidad y
+            confianza en cada interacción. Con nosotros, tu app será una
+            herramienta estratégica para crecer y diferenciarte en el mercado.
+          </p>
+          <div
+            class="mt-6 flex items-center gap-1.5 text-dc-red text-sm font-semibold"
+          >
+            Conocer más <span>→</span>
+          </div>
+        </article>
+
+        <!-- Crecimiento Digital -->
+        <article
+          class="svc-card bg-white rounded-2xl p-8 border border-ink/8 dark:bg-black reveal delay-2"
+        >
+   
+
+          <h3 class="font-display text-2xl text-ink mt-1 mb-4 tracking-wide dark:text-cyan-600">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 17l4-4 4 4 4-5 4-4"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>  CRECIMIENTO DIGITAL
+          </h3>
+          <p class="text-ink/55 text-sm leading-relaxed">
+            SEO, redes sociales y visibilidad online para llevar tu marca donde
+            están tus clientes potenciales.
+          </p>
+          <div
+            class="mt-6 flex items-center gap-1.5 text-ink/40 text-sm font-semibold"
+          >
+            Conocer más <span>→</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA -->
+      <div class="reveal mt-12 text-center">
+        <a
+          href="https://wa.me/573181252775"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-ink text-paper bg-cyan-600 font-semibold px-8 py-4
+                rounded-full hover:bg-ink/85 transition-colors duration-300 text-sm"
+        >
+          Cuéntanos de tu proyecto →
+        </a>
       </div>
     </div>
   </section>
+ <section id="proceso" class="bg-paper-2 relative py-24 px-6 md:px-12 overflow-hidden">
+  <span class="sec-num text-ink">03</span>
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="reveal mb-16">
+      <span class="inline-flex items-center gap-2 text-dc-blue text-xs font-semibold tracking-[.22em] uppercase">
+        <span class="w-6 h-px bg-dc-blue"></span>Nuestro proceso
+      </span>
+      <h2 class="font-display text-ink mt-3 leading-none text-clamp-heading">
+        ASÍ TRABAJAMOS<br>CONTIGO
+      </h2>
+    </div>
+
+    <div class="space-y-2" id="accordion">
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal open">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors" data-tab-trigger="" aria-expanded="true">
+          <span class="tab-num font-display text-5xl text-dc-red w-14 flex-shrink-0 transition-colors">01</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">CONSULTORÍA INICIAL</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
+            Analizamos tus necesidades, objetivos de negocio y el estado actual de tu presencia digital para construir un plan claro y alcanzable.
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors" data-tab-trigger="" aria-expanded="false">
+          <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">02</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">DISEÑO Y DESARROLLO</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
+            Creamos tu solución a medida: visualmente atractiva, funcional y optimizada. Te mantenemos informado en cada etapa del proceso creativo.
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors" data-tab-trigger="" aria-expanded="false">
+          <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">03</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">LANZAMIENTO</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
+            Desplegamos tu proyecto con las mejores prácticas de rendimiento y seguridad. Pruebas exhaustivas antes de salir al aire para garantizar cero errores.
+          </p>
+        </div>
+      </div>
+
+      <div class="tab-wrap border border-ink/12 rounded-2xl overflow-hidden reveal">
+        <button class="w-full flex items-center gap-5 p-6 text-left hover:bg-ink/4 transition-colors" data-tab-trigger="" aria-expanded="false">
+          <span class="tab-num font-display text-5xl text-ink/25 w-14 flex-shrink-0 transition-colors">04</span>
+          <h3 class="font-display text-xl text-ink tracking-wide flex-1">SEGUIMIENTO Y CRECIMIENTO</h3>
+          <svg class="tab-arrow w-5 h-5 text-ink/40 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="tab-body">
+          <p class="px-6 pb-6 text-ink/55 text-sm leading-relaxed pl-20">
+            Monitoreamos el rendimiento y te acompañamos en el crecimiento continuo. Tu negocio evoluciona — tu plataforma digital también.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 </Layout>
 
 <style>
@@ -38,30 +245,30 @@ import Layout from '../../layouts/Layout.astro';
     min-height: 60vh;
     padding: 4rem 2rem;
   }
-  
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
   }
-  
+
   .subtitle {
     font-size: 1.125rem;
     opacity: 0.8;
     margin-bottom: 3rem;
   }
-  
+
   .servicios-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
-  
+
   .servicio-card {
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -69,12 +276,12 @@ import Layout from '../../layouts/Layout.astro';
     background: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
   }
-  
+
   .servicio-card:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
   }
-  
+
   .servicio-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
