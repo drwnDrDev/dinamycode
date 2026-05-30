@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout
   title="Servicios de Diseño Web y Desarrollo de Software | DinamyCode"
-  description="Acelera tu crecimiento con tecnología de vanguardia. ⚡  Páginas web optimizadas para SEO y aplicaciones móviles a medida, chatbots inteligentes y agentes autónomos de Inteligencia Artificial. Descubre cómo escalamos tu empresa."
+  description="Páginas web optimizadas para SEO y aplicaciones móviles a medida, chatbots inteligentes y agentes autónomos de Inteligencia Artificial. Web Hosting confiable y soporte continuo. En DinamyCode, transformamos tu presencia digital con soluciones innovadoras que convierten visitantes en clientes reales. Descubre nuestros servicios y lleva tu negocio al siguiente nivel."
 >
   <section
     id="servicios"
@@ -381,7 +381,46 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   .servicio-card h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     margin-bottom: 1rem;
   }
 </style>
+
+<script>
+  const tabWraps = Array.from(document.querySelectorAll(".tab-wrap"));
+  const tabButtons = Array.from(document.querySelectorAll("[data-tab-trigger]"));
+
+  const closeAllTabs = () => {
+    tabWraps.forEach((wrap) => {
+      wrap.classList.remove("open");
+      const button = wrap.querySelector("button");
+      if (button) {
+        button.setAttribute("aria-expanded", "false");
+      }
+    });
+  };
+
+  const openTab = (button:any) => {
+    const wrap = button.closest(".tab-wrap");
+    if (!wrap) {
+      return;
+    }
+
+    const isOpen = wrap.classList.contains("open");
+    closeAllTabs();
+
+    if (!isOpen) {
+      wrap.classList.add("open");
+      button.setAttribute("aria-expanded", "true");
+    }
+  };
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => openTab(button));
+  });
+
+  const firstButton = tabButtons[0];
+  if (firstButton) {
+    openTab(firstButton);
+  }
+</script>

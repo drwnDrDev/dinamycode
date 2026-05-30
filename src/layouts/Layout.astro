@@ -9,27 +9,36 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  tag?: string;
   image?: string; // og:image URL
   lang?: string;
 }
 
-const { title = 'DinamyCode – Agencia de diseño web y desarrollo de software',
+const { title = 'DinamyCode | Agencia de diseño web y desarrollo de software',
         description = 'Transformamos negocios con tecnología que convierte visitantes en clientes reales.',
-        image = '/og-image.png',
+        image = '/dinamycode_og.jpg',
+        tag = 'diseño web, desarrollo de software, aplicaciones a medida, SEO, Bogotá, Colombia',
         lang = 'es' } = Astro.props as Props;
----
-
 ---
 <!DOCTYPE html>
 <html lang={lang} class="scroll-smooth bg-ink text-paper">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
+    <meta name="keywords" content=`${tag},desarrollo web bogotá, desarrollo de software colombia,desarrollo de aplicaciones a medida Bogotá,diseño web agencia digital bogotá, aplicaciones web a medida, posicionamiento SEO colombia, diseño web para empresas colombia, programadores freelance Bogotá, web hosting,mobile app development, chatbots inteligentes, agentes autónomos IA` />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content="DinamyCode - Agencia de diseño web y desarrollo de software en Bogotá" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="488" />
+    <meta property="og:url" content="https://dinamycode.com" />
+    <meta property="og:site_name" content="DinamyCode" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:updated_time" content={new Date().toISOString()} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
@@ -39,8 +48,33 @@ const { title = 'DinamyCode – Agencia de diseño web y desarrollo de software'
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "DinamyCode",
+  "url": "https://dinamycode.com",
+  "logo": "https://dinamycode.com/logo.png",
+  "description": "Agencia de diseño web y desarrollo de software en Bogotá. Servicios: diseño web, apps y crecimiento digital.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+57 318 1252775",
+    "contactType": "customer service",
+    "areaServed": "CO",
+    "availableLanguage": ["es","en"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/dinamycode",
+    "https://www.linkedin.com/company/dinamycode"
+  ]
+}
+</script>
+
+ 
   </head>
   <body class="antialiased min-h-screen flex flex-col">
+    
+    
     <!-- Preloader (visible until page fully loaded) -->
     <Preloader />
     <!-- Navbar -->
@@ -51,7 +85,5 @@ const { title = 'DinamyCode – Agencia de diseño web y desarrollo de software'
     </main>
     <!-- Footer -->
     <Footer />
-    <!-- Global scripts (optional) -->
-    <script async defer data-astro-prefetch src="/js/main.js"></script>
   </body>
 </html>

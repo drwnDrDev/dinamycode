@@ -9,9 +9,9 @@ const homeLink = (hash: string) => isHome ? hash : `/${hash}`;
 const navItems = [
   { href: '/servicios/', label: 'Servicios', colorClass: 'bg-dc-red' },
   { href: '/productos/', label: 'Productos', colorClass: 'bg-dc-blue' },
-  { href: homeLink('#clientes'), label: 'Clientes', colorClass: 'bg-dc-yellow' },
-  { href: homeLink('#proceso'), label: 'Proceso', colorClass: 'bg-dc-red' },
-  { href: homeLink('#nosotros'), label: 'Nosotros', colorClass: 'bg-dc-blue' },
+  { href: ('/contacto/'), label: 'Contacto', colorClass: 'bg-dc-yellow' },
+  { href: ('/'), label: 'Inicio', colorClass: 'bg-dc-red' },
+  
 ];
 
 const year = new Date().getFullYear();
@@ -26,7 +26,7 @@ const year = new Date().getFullYear();
       <div class="md:col-span-2">
         <a href="/" class="flex items-center gap-3 mb-4 group" aria-label="DinamyCode inicio">
           <img
-            src="/img/dinamycode_title.svg"
+            src="/assets/img/dinamycode_title.svg"
             alt="DinamyCode"
             class="w-auto h-10 transition-transform duration-300 group-hover:scale-110"
             width="200"
@@ -48,7 +48,7 @@ const year = new Date().getFullYear();
             aria-label="LinkedIn de DinamyCode"
             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-dc-red/60 hover:bg-dc-red/10 transition-all duration-300"
           >
-            <img src="/svg/Linkedin.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true" loading="lazy" decoding="async" />
+            <img src="/assets/svg/Linkedin.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true" loading="lazy" decoding="async" />
           </a>
           <a
             href="https://wa.me/573181252775"
@@ -57,7 +57,7 @@ const year = new Date().getFullYear();
             aria-label="WhatsApp de DinamyCode"
             class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-dc-blue/60 hover:bg-dc-blue/10 transition-all duration-300"
           >
-            <img src="/svg/WhatsApp.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true" loading="lazy" decoding="async" />
+            <img src="/assets/svg/WhatsApp.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true" loading="lazy" decoding="async" />
           </a>
         </div>
       </div>

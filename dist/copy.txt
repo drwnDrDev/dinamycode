@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://dinamycode.com/sitemap.xml
