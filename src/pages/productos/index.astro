@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Productos y Soluciones SaaS | DinamyCode"
-  description="Conoce nuestras soluciones SaaS diseñadas para resolver problemas reales en Colombia. 🛠️ Desde Asambli (gestión de asambleas PH), hasta Lisapp (laboratorio clínico inteligente) y FotoAleph (eventos y fotografía profesional). Software de alta calidad."
+  description="Mobile web development - software Asambleas de Propiedad Horizontal - Gestor de tu laboratorio clínico"
 >
 
 
@@ -15,21 +15,25 @@ import Layout from '../../layouts/Layout.astro';
       <p class="subtitle">Soluciones tecnológicas desarrolladas para optimizar tu negocio</p>
      
       <div class="willing-grid">
-        <div class="willing-card bg-blue-400">
+        <a href="https://asambli.dinamycode.com/" class="willing-card bg-blue-400">
           <h3>Asambli</h3>
           <p>Gestión de Asambleas de propiedad horizontal</p>
-        </div>
-
-        <div class="willing-card bg-cyan-800">
-          <div>       
-             <a href="https://lissapp.dinamycode.com/" target="_blank" class="btn btn-primary bg-cyan-300 hover:bg-cyan-50 p-2 rounded-md"> <span class="text-3xl">🔬</span>Lissapp</a>
+          <div class="image p-4">
+            <img class="w-88" src="/img/asambli.png" alt="Asambli">
           </div>
-          <div>
-          <h3>Lissapp</h3>
+        </a>
+
+        <a href="https://lissapp.dinamycode.com/" target="_blank" class="willing-card bg-cyan-800">
+
+         
+          <h3> 🔬 Lissapp</h3>
           <p>Tu aliado en la gestión de tu laboratorio clínico</p>
+          
+          <div  class="image p-4">
+              <img class="w-88" src="/img/lissapp.png" alt="Lissapp">
           </div>
 
-        </div>
+        </a>
 
       </div>
 
@@ -69,6 +73,19 @@ import Layout from '../../layouts/Layout.astro';
     margin-bottom: 1rem;
   }
   
+  .producto-card:hover,
+  .willing-card:hover,
+  .willing-card:focus,
+   .producto-card:focus
+   {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .producto-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
   .subtitle {
     font-size: 1.125rem;
     opacity: 0.8;
@@ -80,12 +97,6 @@ import Layout from '../../layouts/Layout.astro';
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
-  .willing-grid {
-    display: grid;
-    grid-template-columns:auto auto;
-    padding: 1rem;
-    gap: 1rem;
-  }
 
   .producto-card {
     padding: 2rem;
@@ -94,25 +105,26 @@ import Layout from '../../layouts/Layout.astro';
     background: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
   }
+  .willing-grid {
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+  }
   
   .willing-card {
     padding: 2rem;
     border: 2px solid rgba(255, 255, 255, 0.893);
     border-radius: 0.5rem;
-    background-image: url('/img/ads.png');
     transition: all 0.3s ease;
   }
-  
+ @media (min-width: 768px)  {
+    .willing-grid {
+    display: grid;
+    grid-template-columns:auto auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  }
   
 
-  .producto-card:hover,
-  .willing-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .producto-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
 </style>
