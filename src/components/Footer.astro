@@ -1,0 +1,186 @@
+---
+// Footer with smart navigation - links adapt based on current page
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/';
+
+// Helper: if on home page use hash links, else use absolute links with hash
+const homeLink = (hash: string) => isHome ? hash : `/${hash}`;
+
+const navItems = [
+  { href: '/servicios/', label: 'Servicios', colorClass: 'bg-dc-red' },
+  { href: '/productos/', label: 'Productos', colorClass: 'bg-dc-blue' },
+  { href: ('/contacto/'), label: 'Contacto', colorClass: 'bg-dc-yellow' },
+  { href: ('/'), label: 'Inicio', colorClass: 'bg-dc-red' },
+  
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink pt-16 pb-8 px-6 md:px-12 border-t border-white/8">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <a href="/" class="flex items-center gap-3 mb-4 group" aria-label="DinamyCode inicio">
+          <img
+            src="/assets/img/dinamycode_title.svg"
+            alt="DinamyCode"
+            class="w-auto h-10 transition-transform duration-300 group-hover:scale-110"
+            width="200"
+            height="40"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        <p class="text-paper/35 text-sm leading-relaxed max-w-xs">
+          Agencia de diseño web y desarrollo de software en Bogotá, Colombia.
+          Transformamos negocios con tecnología que convierte visitantes en clientes reales.
+        </p>
+        <!-- Social -->
+        <div class="flex items-center gap-3 mt-6">
+          <a
+            href="https://www.linkedin.com/company/dinamycode/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de DinamyCode"
+            class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-dc-red/60 hover:bg-dc-red/10 transition-all duration-300"
+          >
+            <img src="/assets/svg/Linkedin.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true" loading="lazy" decoding="async" />
+          </a>
+          <a
+            href="https://wa.me/573181252775"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp de DinamyCode"
+            class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-dc-blue/60 hover:bg-dc-blue/10 transition-all duration-300"
+          >
+            <img src="/assets/svg/WhatsApp.svg" alt="" class="w-4 h-4 opacity-55" aria-hidden="true" loading="lazy" decoding="async" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Navegación inteligente -->
+      <div>
+        <h2 class="font-display text-paper text-lg tracking-widest mb-5">Pilotaje</h2>
+        <ul class="space-y-2.5" role="list">
+          {navItems.map(({ href, label, colorClass }) => (
+            <li>
+              <a
+                href={href}
+                data-astro-prefetch
+                class="text-paper/40 text-sm hover:text-paper transition-colors flex items-center gap-2 group smart-nav-link"
+                data-section={href.includes('#') ? href.split('#')[1] : null}
+              >
+                <span class={`w-1 h-1 rounded-full ${colorClass.replace('bg-', 'opacity-0 group-hover:opacity-100 transition-opacity')} opacity-0 group-hover:opacity-100 transition-opacity`} style={`background-color: var(--color-${colorClass.replace('bg-', '')})`}></span>
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div>
+        <h2 class="font-display text-paper text-lg tracking-widest mb-5">CONTACTO</h2>
+        <address class="not-italic space-y-2 text-sm text-paper/40">
+          <p>Dg. 69c Sur #78C-36</p>
+          <p>Bogotá, Colombia</p>
+          <a href="tel:+573181252775" class="block hover:text-paper transition-colors mt-2">
+            +57 318 1252775
+          </a>
+          <a href="mailto:hola@dinamycode.com" class="block hover:text-paper transition-colors">
+            hola@dinamycode.com
+          </a>
+        </address>
+        <!-- CTA en footer -->
+        <a
+          href="https://wa.me/573181252775"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-red mt-6 inline-flex items-center gap-2 bg-dc-red text-white text-xs font-semibold px-4 py-2.5 rounded-full"
+        >
+          Hablemos →
+        </a>
+      </div>
+
+    </div>
+
+    <div class="pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-paper/25 text-xs">DinamyCode &copy; {year} · Todos los derechos reservados.</p>
+      <p class="text-paper/20 text-xs">Hecho con ♥ en Bogotá, Colombia</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scroll to Top button with neon effect -->
+<button
+  id="scroll-top"
+  type="button"
+  aria-label="Volver al inicio de la página"
+  title="Volver al inicio"
+  class="group"
+>
+  <svg 
+    width="18" 
+    height="18" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    aria-hidden="true"
+    class="text-dc-red"
+  >
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<script>
+  const btn = document.getElementById('scroll-top');
+
+  // Show/hide based on scroll position
+  window.addEventListener('scroll', () => {
+    btn?.classList.toggle('visible', window.scrollY > 350);
+  }, { passive: true });
+
+  // Smooth scroll to top on click
+  btn?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Smart navigation: handle section links on non-home pages
+  const currentPath = window.location.pathname;
+  const isHome = currentPath === '/';
+
+  if (!isHome) {
+    document.querySelectorAll('.smart-nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href?.startsWith('/#')) {
+          e.preventDefault();
+          // Navigate to home and scroll to section
+          const section = href.split('#')[1];
+          window.location.href = `/#${section}`;
+        }
+      });
+    });
+  }
+
+  // Auto-scroll to section if URL has hash on page load
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, { once: true });
+</script>
