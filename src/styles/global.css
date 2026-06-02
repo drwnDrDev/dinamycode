@@ -28,7 +28,21 @@ body{
   color:#f4f3ee;
   overflow-x:hidden
 }
-.text-clamp-heading{font-size:clamp(2.6rem,7vw,5.5rem)}
+img,svg,video,canvas{
+  max-width:100%;
+  height:auto
+}
+button,a{
+  min-width:0
+}
+p,h1,h2,h3,h4,h5,h6{
+  overflow-wrap:break-word
+}
+.text-clamp-heading{
+  font-size:clamp(2.35rem,9vw,5.5rem);
+  line-height:.95;
+  letter-spacing:0
+}
 .reveal{
   animation:reveal-up linear both;
   animation-timeline:view();

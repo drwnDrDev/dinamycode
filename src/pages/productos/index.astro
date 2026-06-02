@@ -59,7 +59,7 @@ import Layout from '../../layouts/Layout.astro';
 <style>
   .productos-section {
     min-height: 60vh;
-    padding: 4rem 2rem;
+    padding: clamp(3rem, 8vw, 4rem) clamp(1rem, 5vw, 2rem);
   }
   
   .container {
@@ -68,9 +68,10 @@ import Layout from '../../layouts/Layout.astro';
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2.25rem, 9vw, 2.5rem);
     font-weight: 700;
     margin-bottom: 1rem;
+    line-height: 1.05;
   }
   
   .producto-card:hover,
@@ -94,12 +95,12 @@ import Layout from '../../layouts/Layout.astro';
   
   .productos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(1rem, 4vw, 2rem);
   }
 
   .producto-card {
-    padding: 2rem;
+    padding: clamp(1.25rem, 5vw, 2rem);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.05);
@@ -107,21 +108,29 @@ import Layout from '../../layouts/Layout.astro';
   }
   .willing-grid {
     display: grid;
-    padding: 1rem;
+    padding: 1rem 0;
     gap: 1rem;
   }
   
   .willing-card {
-    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.25rem, 5vw, 2rem);
     border: 2px solid rgba(255, 255, 255, 0.893);
     border-radius: 0.5rem;
     transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .willing-card img {
+    width: min(100%, 22rem);
+    margin-inline: auto;
   }
  @media (min-width: 768px)  {
     .willing-grid {
     display: grid;
-    grid-template-columns:auto auto;
-    padding: 1rem;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    padding: 1rem 0;
     gap: 1rem;
   }
   }

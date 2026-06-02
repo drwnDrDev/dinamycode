@@ -6,55 +6,47 @@ import Layout from '../layouts/Layout.astro';
   title="Diseño Web y Desarrollo de Software en Bogotá | DinamyCode"
   description="Desarrollo de software a medida, páginas web de alto impacto y soluciones avanzadas de IA en Bogotá"
 >
-  <section class="min-h-screen md:pt-24 lg:ml-6 flex flex-wrap justify-center overflow-hidden bg-ink grid-bg">
-    <div class="w-4/5">
+  <section class="hero-home bg-ink grid-bg overflow-hidden">
+    <div class="hero-home__inner">
+      <div class="hero-home__content">
+        <div class="flex flex-col justify-start items-start gap-1 mb-4 reveal">
+          <span class="text-dc-red text-xs font-semibold uppercase tracking-[.18em]">Agencia Digital · Bogotá, Colombia</span>
+          <span class="w-12 h-px bg-dc-red"></span>
+        </div>
 
- 
-    <div class="flex flex-col justify-start items-start gap-0  mb-2 lg:mb-4 reveal">
-      <span class="text-dc-red text-xs font-light  md:font-semiboldmd:uppercase">Agencia Digital · Bogotá, Colombia</span>
-      <span class="w-12 h-px bg-dc-red"></span>
-    </div>
+        <h1 class="font-display text-paper leading-none hero-h1">
+          DISEÑAMOS EL <span class="text-dc-red">FUTURO</span> DIGITAL.
+        </h1>
 
-    <h1 class="font-display text-paper max-w-sm leading-none hero-h1">
-     DISEÑAMOS EL <span class="text-dc-red">FUTURO</span> DIGITAL.
-    </h1>
+        <p class="hero-lead text-cyan-300 leading-relaxed">
+          Creamos software a medida y sitios web que convierten visitantes en clientes reales.
+        </p>
 
-    <!-- Description -->
-    <p class="text-start text-paper/55 md:text-lg leading-relaxed p-4">
-      Creamos software a medida y sitios web que convierten visitantes en clientes reales.
-    </p>
-
-    <!-- CTAs -->
-    <div class="flex flex-wrap items-center gap-4">
-      <a href="https://wa.me/573181252775" target="_blank" rel="noopener noreferrer" class="btn-red bg-dc-red text-white font-semibold px-8 py-4 rounded-full text-base">
-        Inicia tu proyecto →
-      </a>
-      <a href="/servicios" class="border border-paper/20 text-paper/65 hover:text-paper hover:border-paper/50
-                font-medium px-8 py-4 rounded-full text-base transition-all duration-300">
-        Ver servicios
-      </a>
-    </div>
-
-   
-  </div>
-
-   <!-- Stats -->
-    <div class="flex flex-col w-full justify-center items-center lg:w-1/6 gap-3 p-2">
-      <div >
-        <p class="bg-blue-500 rounded-full font-display text-4xl text-dc-yellow">+30</p>
-        <p class="text-paper/40 text-xs mt-1 leading-tight">Proyectos entregados</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/573181252775" target="_blank" rel="noopener noreferrer" class="btn-red action-link bg-dc-red text-white font-semibold">
+            Inicia tu proyecto →
+          </a>
+          <a href="/servicios" class="action-link border border-paper/20 text-paper/70 hover:text-paper hover:border-paper/50 font-medium transition-all duration-300">
+            Ver servicios
+          </a>
+        </div>
       </div>
-      <div>
-        <p class="font-display text-4xl text-dc-yellow">5+</p>
-        <p class="text-paper/40 text-xs mt-1 leading-tight">Años de experiencia</p>
-      </div>
-      <div>
-        <p class="font-display text-4xl text-dc-yellow">100%</p>
-        <p class="text-paper/40 text-xs mt-1 leading-tight">Clientes satisfechos</p>
+
+      <div class="hero-stats" aria-label="Indicadores de DinamyCode">
+        <div class="hero-stat">
+          <p class="font-display text-dc-yellow">+30</p>
+          <span>Proyectos entregados</span>
+        </div>
+        <div class="hero-stat">
+          <p class="font-display text-dc-yellow">5+</p>
+          <span>Años de experiencia</span>
+        </div>
+        <div class="hero-stat">
+          <p class="font-display text-dc-yellow">100%</p>
+          <span>Clientes satisfechos</span>
+        </div>
       </div>
     </div>
-
-
   </section>
 
 
@@ -78,49 +70,49 @@ import Layout from '../layouts/Layout.astro';
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal">
         <img src="/assets/svg/Award.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">SEGURIDAD</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Medidas robustas para proteger tu sitio y los datos de tus clientes.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Medidas robustas para proteger tu sitio y los datos de tus clientes.</p>
       </div>
 
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-3">
         <img src="/assets/svg/devices.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">RESPONSIVE</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Experiencia perfecta en móvil, tablet y escritorio sin excepciones.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Experiencia perfecta en móvil, tablet y escritorio sin excepciones.</p>
       </div>
 
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-1">
         <img src="/assets/svg/Calendar.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">SEO</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Aparecer primero en Google no es suerte — es estrategia y técnica.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Aparecer primero en Google no es suerte — es estrategia y técnica.</p>
       </div>
 
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-4">
         <img src="/assets/svg/Bookmark.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">DISEÑO MODERNO</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Tendencias actuales de diseño que se traducen en más conversiones.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Tendencias actuales de diseño que se traducen en más conversiones.</p>
       </div>
 
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-2">
         <img src="/assets/svg/Camera.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">REDES SOCIALES</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Integración estratégica para maximizar tu presencia online.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Integración estratégica para maximizar tu presencia online.</p>
       </div>
 
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-5">
         <img src="/assets/svg/Docs.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">GESTIÓN CMS</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Actualiza tu contenido sin conocimientos técnicos, fácil y rápido.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Actualiza tu contenido sin conocimientos técnicos, fácil y rápido.</p>
       </div>
 
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-6">
         <img src="/assets/svg/Piechart.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">ANALÍTICA</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Datos en tiempo real sobre el comportamiento de tus visitantes.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Datos en tiempo real sobre el comportamiento de tus visitantes.</p>
       </div>
 
       <div class="ben-card bg-ink-card border border-white/8 rounded-xl p-6 reveal delay-7">
         <img src="/assets/svg/Download.svg" alt="" class="w-7 h-7 mb-4 opacity-75" aria-hidden="true">
         <h3 class="font-display text-lg text-paper tracking-wide mb-2">VELOCIDAD</h3>
-        <p class="text-paper/40 text-xs leading-relaxed">Sitios optimizados para cargar rápido y escalar en los buscadores.</p>
+        <p class="text-paper/90 text-xs leading-relaxed">Sitios optimizados para cargar rápido y escalar en los buscadores.</p>
       </div>
 
     </div>
@@ -129,32 +121,123 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .hero {
-    min-height: 60vh;
+  .hero-home {
+    min-height: calc(100svh - 5rem);
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    padding: clamp(3rem, 9vw, 7rem) clamp(1rem, 5vw, 4rem);
   }
-  
+
+  .hero-home__inner {
+    width: min(100%, 1180px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .hero-home__content {
+    max-width: 760px;
+  }
+
+  .hero-h1 {
+    max-width: 9.5ch;
+    font-size: clamp(3.8rem, 18vw, 8rem);
+    letter-spacing: 0;
+    overflow-wrap: normal;
+  }
+
+  .hero-lead {
+    max-width: 34rem;
+    margin-block: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2.6vw, 1.25rem);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .85rem;
+    align-items: center;
+  }
+
+  .action-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.25rem;
+    padding: .95rem clamp(1.25rem, 4vw, 2rem);
+    border-radius: 999px;
+    font-size: clamp(.95rem, 2.8vw, 1rem);
+    line-height: 1.1;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+  }
+
+  .hero-stat {
+    min-width: 0;
+    border: 1px solid rgba(244, 243, 238, .1);
+    border-radius: .75rem;
+    padding: .85rem;
+    background: rgba(19, 20, 42, .58);
+  }
+
+  .hero-stat p {
+    font-size: clamp(2.25rem, 10vw, 4rem);
+    line-height: .9;
+  }
+
+  .hero-stat span {
+    display: block;
+    margin-top: .35rem;
+    color: rgba(244, 243, 238, .84);
+    font-size: clamp(.78rem, 2.5vw, .9rem);
+    line-height: 1.2;
+  }
+
+  @media (min-width: 900px) {
+    .hero-home__inner {
+      grid-template-columns: minmax(0, 1fr) minmax(11rem, 15rem);
+      align-items: end;
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .hero-home {
+      align-items: flex-start;
+      padding-top: 2.5rem;
+    }
+
+    .hero-h1 {
+      max-width: 8.4ch;
+      font-size: clamp(3.1rem, 16vw, 3.8rem);
+    }
+
+    .hero-actions {
+      align-items: stretch;
+    }
+
+    .action-link {
+      width: 100%;
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
   }
-  
-  h1 {
-    font-size: clamp(4rem, 7vw, 9rem);
-    font-weight: 500;
-    margin-bottom: 1rem;
-    line-height: .8;
-  }
-  
-  p {
-    font-size: 1.25rem;
-    opacity: 0.8;
-  
-  }
-
 </style>
