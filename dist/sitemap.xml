@@ -6,22 +6,45 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://dinamycode.com/servicios</loc>
+        <loc>https://dinamycode.com/servicio/</loc>
         <lastmod>2026-05-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://dinamycode.com/productos</loc>
+        <loc>https://dinamycode.com/productos/</loc>
         <lastmod>2026-05-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://dinamycode.com/contacto</loc>
+        <loc>https://dinamycode.com/contacto/</loc>
         <lastmod>2026-05-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://business.dinamycode.com</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+
+    <url>
+        <loc>https://lissapp.dinamycode.com</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+
+    <url>
+        <loc>https://asambli.dinamycode.com</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
     </url>
 
 
