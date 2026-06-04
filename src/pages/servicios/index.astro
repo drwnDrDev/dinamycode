@@ -1,14 +1,16 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BtnAction from "../../components/UI/BtnAction.astro";
+
 ---
 
 <Layout
   title="Servicios de Diseño Web y Desarrollo de Software | DinamyCode"
-  description="Páginas web optimizadas para SEO y aplicaciones móviles a medida, chatbots inteligentes y agentes autónomos de Inteligencia Artificial. Web Hosting confiable y soporte continuo. En DinamyCode, transformamos tu presencia digital con soluciones innovadoras que convierten visitantes en clientes reales. Descubre nuestros servicios y lleva tu negocio al siguiente nivel."
+  description="Páginas web optimizadas para SEO y aplicaciones móviles a medida, chatbots inteligentes y agentes autónomos de Inteligencia Artificial"
 >
   <section
     id="servicios"
-    class="bg-paper dark:bg-cyan-950 relative py-24 px-6 md:px-12 overflow-hidden"
+    class="bg-paper dark:bg-ink relative py-24 px-6 md:px-12 overflow-hidden"
   >
 
     <div class="max-w-6xl mx-auto">
@@ -58,7 +60,7 @@ import Layout from "../../layouts/Layout.astro";
               >la esencia de tu marca.</span
             >
           </p>
-          <p class="text-ink/55 text-sm leading-relaxed dark:text-gray-300">
+          <p class="text-ink/55 text-sm leading-relaxed dark:text-gray-200">
             Diseñamos sitios atractivos y los optimizamos para que conviertan
             visitantes en oportunidades de negocio.Tu sitio web será un
             escaparate y el <span
@@ -66,11 +68,8 @@ import Layout from "../../layouts/Layout.astro";
               >motor de crecimiento de tu empresa</span
             > en la economia digital
           </p>
-          <div
-            class="mt-6 flex items-center gap-1.5 text-dc-blue text-sm font-semibold"
-          >
-            Conocer más <span>→</span>
-          </div>
+      
+          <BtnAction argumeto="una pagina para mi negocio" color="text-dc-red"/>
         </article>
 
         <!-- Desarrollo de Apps -->
@@ -115,11 +114,8 @@ import Layout from "../../layouts/Layout.astro";
             confianza en cada interacción. Con nosotros, tu app será una
             herramienta estratégica para crecer y diferenciarte en el mercado.
           </p>
-          <div
-            class="mt-6 flex items-center gap-1.5 text-dc-red text-sm font-semibold"
-          >
-            Conocer más <span>→</span>
-          </div>
+       
+           <BtnAction argumeto="desarrollo de apps nuevas" color="text-dc-blue"/>
         </article>
 
         <!-- Crecimiento Digital -->
@@ -147,11 +143,10 @@ import Layout from "../../layouts/Layout.astro";
             presencia digital no solo destaque, sino que se traduzca en
             resultados medibles y crecimiento sostenido
           </p>
-          <div
-            class="mt-6 flex items-center gap-1.5 text-ink/40 text-sm dark:text-cyan-600 font-semibold"
-          >
-            Conocer más <span>→</span>
-          </div>
+      
+          <BtnAction argumeto="implementación en mi negocio" color="text-dc-red">
+
+    
         </article>
       </div>
 

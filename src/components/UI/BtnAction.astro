@@ -1,0 +1,17 @@
+---
+
+interface Props {
+  argumeto?: string; 
+  color?: string;
+}
+const { argumeto = "Servicios" } = Astro.props;
+const {color="text-dc-red"} = Astro.props;
+
+const phone = "573181252775";
+const clases =  `mt-6 flex items-center gap-1.5 ${color} text-sm font-semibold`
+const whatsappMsg = `Quisiera conocer más sobre ${argumeto}`;
+const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(whatsappMsg)}`;
+---
+
+
+<a href={whatsappUrl} class={clases}> Conocer más → </a> 
