@@ -1,0 +1,182 @@
+---
+interface Props {
+  images?: string[];
+  title?: string;
+}
+
+const { images = ['/assets/img/eventos_1.avif', '/assets/img/lab_1.avif'], title } = Astro.props;
+---
+
+<div class="carousel-container">
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      {images.map((image, index) => (
+        <div class="carousel-slide" data-index={index}>
+          <img src={image} alt={`Slide ${index + 1}`} />
+        </div>
+      ))}
+    </div>
+    
+    <button class="carousel-button carousel-button-prev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    
+    <button class="carousel-button carousel-button-next" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="carousel-indicators">
+    {images.map((_, index) => (
+      <button class="indicator" data-index={index} aria-label={`Slide ${index + 1}`}></button>
+    ))}
+  </div>
+</div>
+
+<style>
+  .carousel-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    color: #333;
+  }
+
+  .carousel-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .carousel-button-prev {
+    left: 12px;
+  }
+
+  .carousel-button-next {
+    right: 12px;
+  }
+
+  .carousel-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .indicator.active {
+    background: #333;
+    width: 28px;
+    border-radius: 5px;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.carousel-container');
+
+    carousels.forEach((carousel) => {
+      const track = carousel.querySelector('.carousel-track');
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const indicators = carousel.querySelectorAll('.indicator');
+      const prevBtn = carousel.querySelector('.carousel-button-prev');
+      const nextBtn = carousel.querySelector('.carousel-button-next');
+
+      let currentIndex = 0;
+      const slideCount = slides.length;
+
+      const updateCarousel = () => {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        indicators.forEach((ind) => ind.classList.remove('active'));
+        indicators[currentIndex].classList.add('active');
+      };
+
+      const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateCarousel();
+      };
+
+      const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateCarousel();
+      };
+
+      nextBtn?.addEventListener('click', nextSlide);
+      prevBtn?.addEventListener('click', prevSlide);
+
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          currentIndex = index;
+          updateCarousel();
+        });
+      });
+
+      // Inicializar
+      updateCarousel();
+
+      // Autoplay opcional (descomenta si quieres)
+      setInterval(nextSlide, 5000);
+    });
+  });
+</script>

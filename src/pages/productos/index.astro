@@ -1,4 +1,5 @@
 ---
+import Carousel from "../../components/UI/Carousel.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -27,25 +28,24 @@ import Layout from "../../layouts/Layout.astro";
           href="https://asambli.dinamycode.com/"
           class="willing-card bg-blue-400"
         >
-          <h3>Asambli</h3>
-          <p>Gestión de Asambleas de propiedad horizontal</p>
+          <h3 class="p-2 text-3xl bg-white/50 dark:bg-black/50 rounded-lg">Asambli</h3>
+          <p class="px-4 font-italic">Gestión de Asambleas de propiedad horizontal</p>
           <div class="image p-4">
             <img class="w-88" src="/assets/img/asambli.png" alt="Asambli" />
           </div>
         </a>
-
+        <div  class="willing-card bg-cyan-800">
         <a
           href="https://lissapp.dinamycode.com/"
           target="_blank"
-          class="willing-card bg-cyan-800"
+        
         >
-          <h3>🔬 Lissapp</h3>
-          <p>Tu aliado en la gestión de tu laboratorio clínico</p>
+          <h3 class="p-2 text-3xl bg-white/50 dark:bg-black/50 rounded-lg">🔬 Lissapp</h3>
+          <p class="px-4">Tu aliado en la gestión de tu laboratorio clínico</p>
 
-          <div class="image p-4">
-            <img class="w-88" src="/assets/img/lissapp.png" alt="Lissapp" />
-          </div>
         </a>
+        <Carousel images={['/assets/img/lissapp.png', '/assets/img/lissa1.png','/assets/img/lissa2.png','/assets/img/lissa3.png','/assets/img/lissa4.png']} />
+    </div>
       </div>
 
       <div class="productos-grid">
