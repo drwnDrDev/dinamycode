@@ -14,6 +14,7 @@ interface Props {
   lang?: string;
 }
 
+const currentPath = "https://dinamycode.com"+ Astro.url.pathname;
 const { title = 'DinamyCode | Agencia de diseño web y desarrollo de software',
         description = 'Transformamos negocios con tecnología que convierte visitantes en clientes reales.',
         image = 'https://dinamycode.com/dinamyCode_og.jpg',
@@ -44,6 +45,7 @@ const { title = 'DinamyCode | Agencia de diseño web y desarrollo de software',
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+    <link rel="canonical" href={currentPath}>
     <!-- Google Fonts – Inter & Outfit for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
